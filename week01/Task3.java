@@ -15,6 +15,7 @@ public class Task3 {
       
          //d. Printing sum
          System.out.println(sum);
+         
 
          scan.close();
     }
