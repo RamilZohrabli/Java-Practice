@@ -5,7 +5,7 @@ public class Task4 {
         double a = 1.0/5.0;
         double b = 2.0/3.0;
         double c = 3.0/10.0;
-    double sum = a*b - c;
+    double sum = a * b - c;
     System.out.println(sum);
     //Adds newline after printing
     System.out.print(sum);
