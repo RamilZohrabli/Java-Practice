@@ -11,7 +11,7 @@ public class Task1 {
     public static void main(String[] args) {
         System.out.println("Hello User " + args[0] + "." + " Nice to meet you");
         System.out.println("I am Ramil Zohrabli");
-        //println is for print line that it is used printing line of text
-        //args syntax is for getting input from terminal in the first line 
+        //the println is for print line that it is used printing line of text
+        //args syntax is for getting input from terminal in thefirst line 
     }
 }
