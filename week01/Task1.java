@@ -9,8 +9,9 @@ public class Task1 {
     //String[] is an indicator of array's type
     //args name of parameter
     public static void main(String[] args) {
-        //println is for print line that it is used printing line of text
-        System.out.println("Hi, Dear user, welcome to Java. Nice to meet you!");
+        System.out.println("Hello User " + args[0] + "." + " Nice to meet you");
         System.out.println("I am Ramil Zohrabli");
+        //println is for print line that it is used printing line of text
+        //args syntax is for getting input from terminal in the first line
     }
 }
