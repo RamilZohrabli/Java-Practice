@@ -9,7 +9,6 @@ public class Task2 {
          int c = scan.nextInt();
 
          int sum = a+b+c;
-
          System.out.println(sum);
 
          scan.close();
