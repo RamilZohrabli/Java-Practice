@@ -7,7 +7,7 @@ public class Task1 {
     //void is return type of method 'main'
     //main is specific method of Java
     //String[] is an indicator of array's type
-    //args name of parameter
+    //args - name of parameter
     public static void main(String[] args) {
         System.out.println("Hello User " + args[0] + "." + " Nice to meet you");
         System.out.println("I am Ramil Zohrabli");
