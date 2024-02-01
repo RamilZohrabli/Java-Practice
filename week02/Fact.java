@@ -9,6 +9,7 @@ public class Fact {
             result = result * number;
             number--;
         }
+        scan.close();
         System.out.println(result);
     }
 }
