@@ -4,9 +4,6 @@ public class Digits {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int Integer = scan.nextInt();
-        if(Integer<0){
-            Integer = -Integer;
-        }
         int sum = 0;
         int product = 1;
         int counter = 0;

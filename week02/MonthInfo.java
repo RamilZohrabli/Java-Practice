@@ -44,5 +44,6 @@ public class MonthInfo {
             default:
                 break;
         }
+        scan.close();
     }
 }

@@ -10,16 +10,17 @@ public class PrintingPatters {
                 if(i%2 == 0 && j%2 == 0){
                     Array[i][j] = "*";
                 }
-                else{
+                else {
                     Array[i][j] = "#";
                 }
             }
         }
-        for(int i = 0; i<number; i++){
+        for(int i = 0; i<number-1; i++){
             for(int j = 0; j<number; j++){
                 System.out.print(Array[i][j] + " ");
             }
             System.out.println();
         }
+        scan.close();
     }
 }
