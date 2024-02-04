@@ -27,6 +27,7 @@
 
 ### 8. CoinToss.java
 - **Description:** Uses a for loop to iterate through coin tosses, employing Math.random() for determining heads or tails. Calculates and prints probabilities of heads and tails.
-### 9. RandomPointsInCircle
+
+### 9. RandomPointsInCircle.java
 - **Description** Geterates and prints the random points inside the circle that its radius is 1 and center is (0,0). It uses Scanner class for obtaining the number of points. Random class is for generating random point within the range of [-1;1]. For loop is for iteration in "n" times and it checks each point that is inside the circle. If it is in, program prints this point in the "(x,y)" format.
 
