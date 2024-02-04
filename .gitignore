@@ -1,1 +1,2 @@
-#Package files
+*.class
+.DS_Store
