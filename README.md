@@ -2,7 +2,7 @@
 # Student ID: P000020069
 # CRN: 20420
 
-## Repository: week02
+## Week02
 
 ### 1. Sum.java
 - **Description:** Takes two integer inputs from the user using the Scanner class, calculates their sum, and prints the result.
