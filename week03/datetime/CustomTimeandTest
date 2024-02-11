@@ -1,0 +1,22 @@
+-----------------------------------------
+|             CustomTime                |
+-----------------------------------------
+| - hour: int                           |
+| - minute: int                         |
+| - second: int                         |
+-----------------------------------------
+| + CustomTime(int, int, int)           |
+| + setHour(int): void                  |
+| + getHour(): int                      |
+| + setMinute(int): void                |
+| + getMinute(): int                    |
+| + setSecond(int): void                |
+| + getSecond(): int                    |
+| + toUniversalString(): String         |
+| + toStandardString(): String          |
+-----------------------------------------
+----------------------------------------
+|         CustomTimeTest               |
+----------------------------------------
+| + main(String[]): void               |
+----------------------------------------
