@@ -2,8 +2,8 @@ package week03.math;
 
 public class ComplexNumber {
     private double real;
-    private float imag;
-    public ComplexNumber(double real, float imag){
+    private double imag;
+    public ComplexNumber(double real, double imag){
         this.real = real;
         this.imag = imag;
     }
@@ -16,7 +16,7 @@ public class ComplexNumber {
     public double re(){
         return real;
     }
-    public float imag(){
+    public double imag(){
         return imag;
     }
     public void conjugate(){
@@ -48,5 +48,4 @@ public class ComplexNumber {
     return new double[]{newReal, newImag};
     }
 }
-    
     
