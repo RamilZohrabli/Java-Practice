@@ -99,7 +99,7 @@ There is a representation of a custom date with month, day and year and the clas
 ## 1. ComplexNumber Class
 The class include the representation and manipulation of complex numbers.
 **Constructor:**
-- `ComplexNumber(double real, double imag)`:It initializes the imaginary and real parts.
+- `ComplexNumber(double real, double imag)`: It initializes the imaginary and real parts.
 **Methods:**
 - `equals(ComplexNumber number)`: Checks the equality of the complex number with the provided complex number.
 - `toString()`: It returns the complex number in the "real + imag*i" form.
