@@ -121,6 +121,23 @@ The `ComplexNumberTest` class is a test application to demonstrate the capabilit
 3. Computes and displays the conjugate of the entered complex number.
 4. Calculates the result of exponentiation for the entered complex number.
 
+# Week04
+## Main Method
+### Performs following tasks:
+- Prints the command line arguments provided by user
+- Converts comand-line arguments to integers and stores them in the array
+- Calls `printIntArray` method and prints the integers that stored inside the array
+- For calculation of sum of integers and printing it, main method calls the `Sum` method 
+## Secondary Methods
+###  `printIntArray(int[] array)`
+This method prints the integers stored in an array.
+
+### `Sum(int[] arrayIntegers)`
+This method calculates and prints the sum of integers in an array.
+
+
+
+
 
 
 
