@@ -124,16 +124,16 @@ The `ComplexNumberTest` class is a test application to demonstrate the capabilit
 # Week04
 ## Main Method
 ### Performs following tasks:
-- Prints the command line arguments provided by user
+- Prints the command line arguments provided by user with the implementation of for loop that iterates through the integers and prints them in each iteration
 - Converts comand-line arguments to integers and stores them in the array
 - Calls `printIntArray` method and prints the integers that stored inside the array
 - For calculation of sum of integers and printing it, main method calls the `Sum` method 
 ## Secondary Methods
 ###  `printIntArray(int[] array)`
-This method prints the integers stored in an array.
+This method prints the integers as an array.
 
 ### `Sum(int[] arrayIntegers)`
-This method calculates and prints the sum of integers in an array.
+This method calculates and prints the sum of integers in an array with for loop. The function of for loop is its iteration until the length of array and adding all integers inside it to sum which is initialized as 0 at the beginning
 
 
 
