@@ -67,4 +67,9 @@ public class CustomTime {
         }
         return String.format("%d:%02d:%02d %s", ordinaryHour, minute, second, period);
     }
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("%02d:%02d:%02d", hour, minute, second));
+        return sb.toString();
+    }
 }

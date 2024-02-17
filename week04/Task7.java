@@ -5,6 +5,7 @@ public class Task7{
         Scanner scan = new Scanner(System.in);
         String input = scan.nextLine();
         System.out.println(reverseString(input));
+        scan.close();
     }
     public static String reverseString(String input) {
         StringBuilder reversedBuilder = new StringBuilder();

@@ -48,4 +48,9 @@ public class Invoice {
     public double getInvoiceAmount(){
         return quantityOfItem * pricePerItem;
     }
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("Part Number: %s, Description: %s, Quantity: %d, Price: %.2f", partNumber, description, quantityOfItem, pricePerItem));
+        return sb.toString();
+    }
 }

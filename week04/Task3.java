@@ -21,6 +21,7 @@ public class Task3 {
         for (int i = 0; i < histogram.length; i++) {
             System.out.println(i + ": " + histogram[i]);
         }
+        scan.close();
     }
     
     public static double[] findMeanMedianAndMode(int[] numbers) {

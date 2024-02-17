@@ -10,9 +10,7 @@ public class ComplexNumber {
     public boolean equals(ComplexNumber number){
         return this.real == number.real && this.imag == number.imag;
     }
-    public String toString(){
-        return String.format("%.2f + %.2fi", real, imag);
-    }
+  
     public double re(){
         return real;
     }
@@ -46,6 +44,11 @@ public class ComplexNumber {
     double newReal = magnitude * Math.cos(n * angle);
     double newImag = magnitude * Math.sin(n * angle);
     return new double[]{newReal, newImag};
+    }   
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("%.2f + %.2fi", real, imag));
+        return sb.toString();
     }
 }
     

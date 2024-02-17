@@ -108,5 +108,12 @@ public class CustomDate {
         }
         return totalDays + day;
     }
+
+    
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.format("%02d/%02d/%d", month, day, year));
+        return sb.toString();
+    }
 }
 
