@@ -122,6 +122,7 @@ The `ComplexNumberTest` class is a test application to demonstrate the capabilit
 4. Calculates the result of exponentiation for the entered complex number.
 
 # Week04
+## Task 1
 ## Main Method
 ### Performs following tasks:
 - Prints the command line arguments provided by user with the implementation of for loop that iterates through the integers and prints them in each iteration
@@ -134,6 +135,54 @@ This method prints the integers as an array.
 
 ### `Sum(int[] arrayIntegers)`
 This method calculates and prints the sum of integers in an array with for loop. The function of for loop is its iteration until the length of array and adding all integers inside it to sum which is initialized as 0 at the beginning
+
+## Task 2
+
+### Main Method
+
+The main method is the entry point of the program. It performs the following tasks:
+
+- It checks if any command-line arguments are provided. If yes, it parses the integers from the arguments. Otherwise, it prompts the user to input the size of the array and its elements.
+- After obtaining the array of integers, it calls three methods to calculate the maximum, minimum, and both minimum and maximum integers.
+- Finally, it prints the results.
+
+### Methods
+
+#### `maximumInteger(int[] Integers)`
+
+- This method takes an array of integers as input and returns the maximum integer in the array.
+- It initializes the maximum variable with the first element of the array.
+- It iterates through the array and updates the maximum variable if it finds a larger integer.
+- Finally, it returns the maximum integer.
+
+#### `minimumInteger(int[] Integers)`
+
+- This method calculates the minimum integer in the array.
+- It initializes the minimum variable with the first element of the array.
+- It iterates through the array and updates the minimum variable if it finds a smaller integer.
+- Finally, it returns the minimum integer.
+
+#### `bothMinimumAndMaximum(int[] Integers)`
+
+- This method calculates both the minimum and maximum integers in the array simultaneously.
+- It initializes the minimum and maximum variables with the first element of the array.
+- It iterates through the array and updates the minimum and maximum variables accordingly.
+- Finally, it returns an array containing both the minimum and maximum integers.
+
+### Usage
+
+- To run the program, compile the `Task2.java` file and execute the generated class file.
+- If providing command-line arguments, use the format: `java Task2 <integer1> <integer2> ...`.
+- If not providing command-line arguments, follow the prompts to input the size of the array and its elements.
+
+### Example
+
+- Input: `java Task2 3 5 1 7 2`
+- Output:
+  - Maximum: 7
+  - Minimum: 1
+  - Both Minimum and Maximum: [1, 7]
+
 
 
 
