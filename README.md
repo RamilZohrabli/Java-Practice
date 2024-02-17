@@ -183,12 +183,475 @@ The main method is the entry point of the program. It performs the following tas
   - Minimum: 1
   - Both Minimum and Maximum: [1, 7]
 
+## Task 3
 
+### Main Method
 
+The `main` method is the entry point of the program. It performs the following tasks:
 
+- It creates a `Scanner` object to read input from the user.
+- It initializes an `ArrayList` to store grades input by the user.
+- It reads integers from the user until no more integers are entered, adding them to the `gradesList`.
+- It converts the `gradesList` to an array of integers.
+- It calls the `findMeanMedianAndMode` method to calculate the mean, median, and mode of the grades.
+- It prints the mean, median, and mode of the grades.
+- It calls the `calculateHistogram` method to calculate the histogram of the grades.
+- It prints the histogram.
 
+### Methods
 
+#### `findMeanMedianAndMode(int[] numbers)`
 
+- This method takes an array of integers as input and returns an array of doubles containing the mean, median, and mode of the numbers.
+- It first sorts the array of numbers.
+- It calculates the median by checking if the number of elements is even or odd and computing accordingly.
+- It calculates the mean by summing up all the numbers and dividing by the total count.
+- It calculates the mode by finding the most frequently occurring number in the array.
+- It returns an array containing the mean, median, and mode.
 
+#### `calculateHistogram(int[] grades)`
 
+- This method takes an array of integers representing grades as input and returns an array representing the histogram of the grades.
+- It initializes an array to store the frequency of each grade (histogram).
+- It iterates through the grades array and increments the corresponding index in the histogram array.
+- It returns the histogram array.
 
+### Usage
+
+- Compile the `Task3.java` file and execute the generated class file.
+- Input the grades separated by spaces.
+- After entering all grades, press `Enter`.
+- The program will output the mean, median, and mode of the grades, followed by the histogram.
+
+### Example
+
+- Input: `85 90 75 85 90 80 75 85 90`
+- Output: `Mean:83.33333333`
+          `Median:85.0`
+          `Mode:85`
+
+## Task 7
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads a string input from the user using `scan.nextLine()`.
+- It calls the `reverseString` method and passes the input string to it.
+- It prints the reversed string.
+- It closes the scanner.
+
+### Methods
+
+#### `reverseString(String input)`
+
+- This method takes a string input and returns the reversed version of the input string.
+- It initializes a `StringBuilder` named `reversedBuilder` to store the reversed string.
+- It iterates through the characters of the input string from the end to the beginning.
+- Within the loop, it appends each character to the `reversedBuilder`.
+- After iterating through all characters, it converts the `StringBuilder` to a string using `toString()` method and returns it.
+
+### Usage
+
+- Compile the `Task7.java` file and execute the generated class file.
+- Input the string you want to reverse.
+- The program will output the reversed string.
+
+### Example
+
+- Input: `"Hello"`
+- Output: `"olleH"`
+
+## Task 8
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads a string input from the user using `scan.nextLine()`.
+- It calls the `explodeAndPrint` method and passes the input string to it.
+- It closes the scanner.
+
+### Methods
+
+#### `explodeAndPrint(String input)`
+
+- This method takes a string input and prints substrings obtained by progressively adding characters from the input string.
+- It initializes a `StringBuilder` named `substr` to store each substring.
+- It iterates through the characters of the input string.
+- Within the loop, it appends the current character to the `substr`, prints the resulting substring, and then prints a newline.
+- This process continues until all characters in the input string have been processed.
+
+### Usage
+
+- Compile the `Task8.java` file and execute the generated class file.
+- Input the string from which you want to generate substrings.
+- The program will output each substring obtained by progressively adding characters from the input string.
+
+### Example
+
+- Input: `"abc"`
+- Output: `"aababc"`
+
+## Task 9
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads a string input from the user using `scan.nextLine()`.
+- It calls the `sortString` method and passes the input string to it.
+- It closes the scanner.
+
+### Methods
+
+#### `sortString(String input)`
+
+- This method takes a string input and sorts its characters in ascending order.
+- It converts the input string to a character array using `toCharArray()` method.
+- It sorts the character array using `Arrays.sort()` method.
+- It iterates through the sorted character array and prints each character.
+
+### Usage
+
+- Compile the `Task9.java` file and execute the generated class file.
+- Input the string you want to sort.
+- The program will output the sorted characters of the input string in ascending order.
+
+### Example
+
+- Input: `"cba"`
+- Output: `"abc"`
+
+## Task 10
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads two strings, `word1` and `word2`, from the user using `scanner.nextLine()`.
+- It calls the `areAnagrams` method with `word1` and `word2` as arguments.
+- If the `areAnagrams` method returns `true`, it prints "YES". Otherwise, it prints "NO".
+- It closes the scanner.
+
+### Methods
+
+#### `areAnagrams(String word1, String word2)`
+
+- This method takes two strings, `word1` and `word2`, and checks if they are anagrams of each other.
+- It converts both strings to character arrays using `toCharArray()` method.
+- It sorts both character arrays using `Arrays.sort()` method.
+- It returns `true` if the sorted character arrays are equal using `Arrays.equals()` method. Otherwise, it returns `false`.
+
+### Usage
+
+- Compile the `Task10.java` file and execute the generated class file.
+- Input two strings, `word1` and `word2`, separated by newlines.
+- The program will output "YES" if the strings are anagrams of each other, and "NO" otherwise.
+
+### Example
+
+- Input:`listen`
+        `silent`
+- Output:`"YES"`
+- Input: `hello`
+         `world`
+-Output: `"NO"`
+
+## Task 11
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads a sentence input from the user using `scan.nextLine()`.
+- It calls the `swapFirstAndLastLetter` method and passes the input sentence to it.
+- It prints the modified sentence obtained after swapping the first and last letters of each word.
+- It closes the scanner.
+
+### Methods
+
+#### `swapFirstAndLastLetter(String sentence)`
+
+- This method takes a sentence as input and swaps the first and last letters of each word in the sentence.
+- It initializes a `StringBuilder` named `modifiedSentence` to store the modified sentence.
+- It splits the input sentence into words using the regular expression `\\s+`, which matches one or more whitespace characters.
+- It iterates through each word in the sentence.
+  - If the word is not empty, it retrieves the first and last characters of the word.
+  - It appends the last character, followed by the substring of the word excluding the first and last characters, and then the first character to the `modifiedSentence`, separated by a space.
+  - If the word is empty, it appends a space to the `modifiedSentence`.
+- It trims any leading or trailing whitespace from the `modifiedSentence`.
+- It returns the modified sentence as a string.
+
+### Usage
+
+- Compile the `Task11.java` file and execute the generated class file.
+- Input the sentence you want to modify.
+- The program will output the modified sentence where the first and last letters of each word are swapped.
+
+### Example
+
+- Input: `"hello world"`
+- Output: `"oellh dlrow"`
+
+## Task 12
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads two strings, `string` and `sub`, from the user using `scan.nextLine()`.
+- It calls the `findSubstringIndex` method with `string` and `sub` as arguments.
+- If the `findSubstringIndex` method returns a valid index, it prints the index. Otherwise, it prints "-1".
+- It closes the scanner.
+
+### Methods
+
+#### `findSubstringIndex(String string, String sub)`
+
+- This method takes two strings, `string` and `sub`, and finds the index of the first occurrence of the substring `sub` in the string `string`.
+- It iterates through the characters of the string `string`, starting from index 1.
+- Within the loop, it checks if the substring of `string` starting from the current index and having the same length as `sub` matches `sub` using `regionMatches()` method.
+- If a match is found, it returns the current index.
+- If no match is found, it returns -1.
+
+### Usage
+
+- Compile the `Task12.java` file and execute the generated class file.
+- Input the string and the substring you want to search for.
+- The program will output the index of the first occurrence of the substring in the string, or "-1" if the substring is not found.
+
+### Example
+
+- Input: `banana`
+- Output: `"2"`
+
+## Task 13
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads a word input from the user using `scan.nextLine()`.
+- It calls the `printingAllSlices` method and passes the input word to it.
+- It closes the scanner.
+
+### Methods
+
+#### `printingAllSlices(String word)`
+
+- This method takes a word as input and prints all possible slices of the word.
+- It iterates through the characters of the word, starting from index 1.
+- Within the loop, it extracts two substrings from the word: the first slice from index 0 to the current index, and the second slice from the current index to the end of the word.
+- It prints the combination of the first and second slices.
+- After the loop, it prints the original word.
+- This method effectively prints all possible prefix-suffix pairs of the word.
+
+### Usage
+
+- Compile the `Task13.java` file and execute the generated class file.
+- Input the word for which you want to print all slices.
+- The program will output all possible prefix-suffix pairs of the word.
+
+### Example
+
+- Input: `"hello"`
+- Output: `"h ello"`
+          `"he llo"`
+          `"hel lo"`
+          `"hell o"`
+          `"hello "`
+
+## Task 15
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads the number of invoices from the user using `scan.nextInt()`.
+- It consumes the newline character after reading the integer input using `scan.nextLine()` to prepare for reading the invoice details.
+- It initializes an array of `Invoice` objects with the size specified by the user.
+- It iterates through each invoice:
+  - It reads the part number, description, quantity of item, and price per item for each invoice from the user.
+  - It creates a new `Invoice` object with the provided details and stores it in the array.
+- It iterates through the array of invoices and prints the invoice amount for each invoice using `getInvoiceAmount()` method.
+- It closes the scanner.
+
+### Usage
+
+- Compile the `Task15.java` file along with the `Invoice` class (assuming it's defined in `week03.invoice` package).
+- Execute the generated class file.
+- Input the number of invoices followed by the details of each invoice as specified by the prompts.
+- The program will output the invoice amount for each invoice.
+
+### Example
+
+- Input: 
+`2`
+`ABC123`
+`Widget`
+`2`
+`10.5`
+`XYZ456`
+`Gadget`
+`3`
+`20.75`
+- Output: `21.0`
+          `62.25`
+
+## Task 16
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads the number of points from the user using `scanner.nextInt()`.
+- It consumes the newline character after reading the integer input using `scanner.nextLine()` to prepare for reading the point details.
+- It initializes an array of `Point` objects with the size specified by the user.
+- It iterates through each point:
+  - It reads the x-coordinate and y-coordinate for each point from the user.
+  - It creates a new `Point` object with the provided coordinates and stores it in the array.
+- It initializes four `Point` objects to store the extreme points (northernmost, southernmost, westernmost, easternmost) and assigns the first point in the array to each extreme point initially.
+- It iterates through the array of points and updates the extreme points if a point with a higher/lower y-coordinate (for northernmost/southernmost) or x-coordinate (for westernmost/easternmost) is found.
+- It calls the `printExtremePoints` method for each extreme point to print the points with the same x-coordinate or y-coordinate as the extreme point.
+- It closes the scanner.
+
+### Methods
+
+#### `printExtremePoints(Point[] points, float value)`
+
+- This method takes an array of points `points` and a float value `value` (representing either x-coordinate or y-coordinate of an extreme point) as input.
+- It iterates through the array of points.
+- Within the loop, it checks if the x-coordinate or y-coordinate of each point matches the provided value.
+- If a match is found, it prints the coordinates of the point.
+
+### Usage
+
+- Compile the `Task16.java` file along with the `Point` class (assuming it's defined in `week03.geometry` package).
+- Execute the generated class file.
+- Input the number of points followed by the coordinates of each point as specified by the prompts.
+- The program will output the extreme points (northernmost, southernmost, westernmost, easternmost) and the points with the same x-coordinate or y-coordinate as each extreme point.
+
+### Example
+
+- Input:
+`5`
+`1.0 2.0`
+`3.0 4.0`
+`5.0 6.0`
+`7.0 8.0`
+`9.0 10.0`
+- Output:
+
+markdown
+Copy code
+## Task 16
+
+### Main Method
+
+The `main` method is the entry point of the program. It performs the following tasks:
+
+- It creates a `Scanner` object to read input from the user.
+- It reads the number of points from the user using `scanner.nextInt()`.
+- It consumes the newline character after reading the integer input using `scanner.nextLine()` to prepare for reading the point details.
+- It initializes an array of `Point` objects with the size specified by the user.
+- It iterates through each point:
+  - It reads the x-coordinate and y-coordinate for each point from the user.
+  - It creates a new `Point` object with the provided coordinates and stores it in the array.
+- It initializes four `Point` objects to store the extreme points (northernmost, southernmost, westernmost, easternmost) and assigns the first point in the array to each extreme point initially.
+- It iterates through the array of points and updates the extreme points if a point with a higher/lower y-coordinate (for northernmost/southernmost) or x-coordinate (for westernmost/easternmost) is found.
+- It calls the `printExtremePoints` method for each extreme point to print the points with the same x-coordinate or y-coordinate as the extreme point.
+- It closes the scanner.
+
+### Methods
+
+#### `printExtremePoints(Point[] points, float value)`
+
+- This method takes an array of points `points` and a float value `value` (representing either x-coordinate or y-coordinate of an extreme point) as input.
+- It iterates through the array of points.
+- Within the loop, it checks if the x-coordinate or y-coordinate of each point matches the provided value.
+- If a match is found, it prints the coordinates of the point.
+
+### Usage
+
+- Compile the `Task16.java` file along with the `Point` class (assuming it's defined in `week03.geometry` package).
+- Execute the generated class file.
+- Input the number of points followed by the coordinates of each point as specified by the prompts.
+- The program will output the extreme points (northernmost, southernmost, westernmost, easternmost) and the points with the same x-coordinate or y-coordinate as each extreme point.
+
+### Example
+
+- Input:
+5
+1.0 2.0
+3.0 4.0
+5.0 6.0
+7.0 8.0
+9.0 10.0
+
+diff
+Copy code
+- Output:
+`(1.0, 2.0)`
+`(3.0, 4.0)`
+`(5.0, 6.0)`
+`(7.0, 8.0)`
+`(9.0, 10.0)`
+`(1.0, 2.0)`
+`(9.0, 10.0)`
+`(1.0, 2.0)`
+`(9.0, 10.0)`
+`(1.0, 2.0)`
+`(9.0, 10.0)`
+`(1.0, 2.0)`
+
+## Task 17
+
+### Main Method
+
+- The `main` method is the entry point of the program.
+- It initializes a `Scanner` object to read input from the user.
+- Reads the number of segments from the user using `scanner.nextInt()`.
+- Consumes the newline character after reading the integer input.
+- Initializes an array of `Segment` objects with the size specified by the user.
+- Iterates through each segment:
+  - Reads the coordinates for each point of the segment from the user.
+  - Creates a new `Segment` object with the provided coordinates and stores it in the array.
+- Calls the `findSegmentsWithMinimumLength` method to find segments with the minimum length.
+- Outputs the segments with the minimum length.
+
+### `findSegmentsWithMinimumLength(Segment[] segments)` Method
+
+- This method takes an array of `Segment` objects `segments` as input.
+- It iterates through the array of segments to find the minimum length.
+- It keeps track of the minimum length and the count of segments with that length.
+- Then, it creates an array to store the segments with the minimum length and fills it with those segments.
+- Finally, it returns the array containing segments with the minimum length.
+
+### Usage
+
+- Compile the `Task17.java` file along with the `Segment` class (assuming it's defined in `week03.geometry` package).
+- Execute the generated class file.
+- Input the number of segments followed by the coordinates of each segment as specified by the prompts.
+- The program will output the segments with the minimum length.
+
+### Example
+
+- Input:
+`3``
+`0.0 0.0 2.0 2.0`
+`1.0 1.0 3.0 3.0`
+`2.0 2.0 4.0 4.0`
+- Output:
+`(0.0, 0.0) - (2.0, 2.0)`
+`(1.0, 1.0) - (3.0, 3.0)`
+`(2.0, 2.0) - (4.0, 4.0)`
