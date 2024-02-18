@@ -50,5 +50,13 @@ public class Segment {
         float maxY = Math.max(p1.getY(), p2.getY());
         return p.getX() >= minX && p.getX() <= maxX && p.getY() >= minY && p.getY() <= maxY;
     }
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Segment from ");
+        sb.append(p1);
+        sb.append(" to ");
+        sb.append(p2);
+        return sb.toString();
+    }
 }
 

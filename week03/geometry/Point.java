@@ -40,6 +40,13 @@ public class Point{
         return this.x == p.getX() && this.y == p.getY();
     }
     public String toString() {
-        return "(" + x + ", " + y + ")";
+        StringBuilder sb = new StringBuilder();
+        sb.append("(");
+        sb.append(x);
+        sb.append(", ");
+        sb.append(y);
+        sb.append(")");
+        return sb.toString();
     }
+    
 }
