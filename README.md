@@ -743,7 +743,7 @@ The `main` method is the entry point of the program. It performs the following t
 ### Example
 
 - Input:
-`3``
+`3`
 `0.0 0.0 2.0 2.0`
 `1.0 1.0 3.0 3.0`
 `2.0 2.0 4.0 4.0`

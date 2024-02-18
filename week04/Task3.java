@@ -61,10 +61,18 @@ public class Task3 {
     }
     
     public static int[] calculateHistogram(int[] grades) {
-        //Creating Histogram
-        int[] histogram = new int[11];
+        int minGrade = Integer.MAX_VALUE;
+        int maxGrade = Integer.MIN_VALUE;
         for (int grade : grades) {
-            histogram[grade]++;
+            minGrade = Math.min(minGrade, grade);
+            maxGrade = Math.max(maxGrade, grade);
+        }
+    
+        int numBins = maxGrade - minGrade + 1;
+    
+        int[] histogram = new int[numBins];
+        for (int grade : grades) {
+            histogram[grade - minGrade]++;
         }
         return histogram;
     }
