@@ -655,3 +655,31 @@ Copy code
 `(0.0, 0.0) - (2.0, 2.0)`
 `(1.0, 1.0) - (3.0, 3.0)`
 `(2.0, 2.0) - (4.0, 4.0)`
+
+## Task 18
+In this task I included `toString()` method to every class in week3 
+
+### `toString()` Method Explanation
+
+The `toString()` method in Java provides a way to convert an object into a string representation. It's like giving each object a way to describe itself in words.
+
+#### Why It's Useful
+
+When you call `toString()` on an object, it gives you a string that tells you about the object's attributes. This can be helpful for debugging, logging, or just understanding what an object contains.
+
+#### How It Works
+
+1. **Creating a String**: Inside the `toString()` method, a `StringBuilder` is often used to build the string efficiently.
+
+2. **Adding Object Information**: The method adds information about the object's attributes to the string, like its part number, description, quantity, and price in the case of an Invoice object.
+
+3. **Returning the String**: Finally, the method returns the constructed string.
+
+#### Example
+
+If you call `toString()` on an Invoice object, it might give you a string like "Part Number: 12345, Description: Widget, Quantity: 5, Price: $10.50".
+
+#### Benefits
+
+Implementing `toString()` makes it easier to understand and work with objects in Java code.
+
