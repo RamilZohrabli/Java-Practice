@@ -230,6 +230,149 @@ The `main` method is the entry point of the program. It performs the following t
           `Median:85.0`
           `Mode:85`
 
+## Task 4
+
+### Main Method
+
+The `main` method reads input from the user to create an adjacency matrix representing a graph. It performs the following steps:
+
+1. Creates a `Scanner` object to read input.
+2. Reads the number of vertices (`n`) and edges (`m`) from the user.
+3. Initializes an `n x n` matrix to represent the adjacency matrix, setting all elements to 0.
+4. Reads each edge from the user, updating the adjacency matrix accordingly.
+5. Prints the resulting adjacency matrix to the console.
+6. Closes the `Scanner` object.
+
+### Usage
+
+1. Compile the `Task4.java` file.
+2. Execute the generated class file.
+3. Input the number of vertices (`n`) followed by the number of edges (`m`).
+4. Enter each edge in the format `vertex1 vertex2`.
+5. After entering all edges, the program will print the resulting adjacency matrix.
+
+### Example
+
+Input:
+`3 3`
+`1 2`
+`2 3`
+`1 3`
+
+Output:
+`011`
+`101`
+`110`
+
+## Task 5
+
+### Main Method
+
+The `main` method serves as the entry point of the program. It performs the following tasks:
+
+1. Creates a `Scanner` object to read input from the user.
+2. Instantiates an object of the `Task5` class to access its methods.
+3. Reads the number of rounds to play from the user.
+4. Calls the `playRounds` method of the `Task5` object, passing the number of rounds as an argument.
+5. Closes the `Scanner` object to prevent resource leaks.
+
+### Task5 Class
+
+#### Fields
+
+- `Random random`: Instance variable of type `Random` to generate random numbers for rolling dice.
+
+#### Constructor
+
+- `public Task5()`: Constructor method initializes the `random` field with a new instance of `Random`.
+
+#### Methods
+
+- `public int rollDice()`: Simulates rolling two dice and returns the sum of their values.
+- `public boolean comeOutRoll(int roll)`: Checks if a given roll is a come-out roll (7 or 11).
+- `public boolean crapsOut(int roll)`: Checks if a given roll results in crapping out (2, 3, or 12).
+- `public boolean playRound()`: Simulates playing a round of the game of Craps. It handles come-out rolls, crapping out, and establishing points.
+- `public void playRounds(int N)`: Plays a specified number of rounds of the game. It calls the `playRound` method for each round and prints the result.
+
+### Usage
+
+1. Compile the `Task5.java` file.
+2. Execute the generated class file.
+3. Enter the number of rounds to play when prompted.
+4. The program will simulate playing the specified number of rounds of the game of Craps and display the results.
+
+### Example
+
+Input:
+`5`
+
+Sample output(Random):
+`Round 1:`
+`Come-out roll: 9`
+`Point established: 9`
+`Next roll: 7`
+`Seven out! Player loses!`
+
+`Round 2:`
+`Come-out roll: 8`
+`Point established: 8`
+`Next roll: 5`
+`Next roll: 9`
+`Next roll: 8`
+`Player wins!`
+`Round 3:`
+`Come-out roll: 4`
+`Point established: 4`
+`Next roll: 10`
+`Next roll: 3`
+`Next roll: 6`
+`Next roll: 9`
+`Next roll: 4`
+`Player wins!`
+
+`Round 4:`
+`Come-out roll: 10`
+`Point established: 10`
+`Next roll: 6`
+`Next roll: 7`
+`Seven out! Player loses!`
+
+`Round 5:`
+`Come-out roll: 11`
+`Player wins!`
+
+## Task 6
+
+### Sieve of Eratosthenes
+
+The `Task6` program implements the Sieve of Eratosthenes algorithm to find prime numbers up to a given limit `n`.
+
+#### `sieve(int n)`
+
+- This method takes an integer `n` as input and returns a list of prime numbers up to `n`.
+- It initializes a boolean array `isPrime` of size `n + 1`, where each element represents whether the corresponding number is prime.
+- It marks all numbers from 2 to `n` as prime initially.
+- It iterates from 2 to the square root of `n`, marking multiples of each prime number as not prime.
+- It collects all prime numbers into a list and returns it.
+
+### Main Method
+
+The `main` method reads an integer `n` from the user and prints all prime numbers up to `n`.
+
+### Usage
+
+1. Compile the `Task6.java` file.
+2. Execute the generated class file.
+3. Enter an integer `n` to find all prime numbers up to `n`.
+4. The program will output the prime numbers up to `n`.
+
+### Example
+
+Input:
+`30`
+Output:
+`Prime numbers up to 30: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]`
+
 ## Task 7
 
 ### Main Method
@@ -610,7 +753,7 @@ The `main` method is the entry point of the program. It performs the following t
 `(2.0, 2.0) - (4.0, 4.0)`
 
 ## Task 18
-In this task I included `toString()` method to every class in week3 
+In this task I included `toString()` method to every class in week03. **Therefore I did not included week03 into git ignore file** 
 
 ### `toString()` Method Explanation
 
