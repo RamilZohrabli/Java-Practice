@@ -487,7 +487,7 @@ The `main` method is the entry point of the program. It performs the following t
 
 ### Usage
 
-- Compile the `Task15.java` file along with the `Invoice` class (assuming it's defined in `week03.invoice` package).
+- Compile the `Task15.java` file along with the `Invoice` class (it's defined in `week03.invoice` package).
 - Execute the generated class file.
 - Input the number of invoices followed by the details of each invoice as specified by the prompts.
 - The program will output the invoice amount for each invoice.
@@ -504,8 +504,10 @@ The `main` method is the entry point of the program. It performs the following t
 `Gadget`
 `3`
 `20.75`
-- Output: `21.0`
-          `62.25`
+
+- Output: 
+`21.0`
+`62.25`
 
 ## Task 16
 
@@ -536,9 +538,9 @@ The `main` method is the entry point of the program. It performs the following t
 
 ### Usage
 
-- Compile the `Task16.java` file along with the `Point` class (assuming it's defined in `week03.geometry` package).
+- Compile the `Task16.java` file with the `Point` class (it's defined in `week03.geometry` package).
 - Execute the generated class file.
-- Input the number of points followed by the coordinates of each point as specified by the prompts.
+- Input the number of points followed by the coordinates.
 - The program will output the extreme points (northernmost, southernmost, westernmost, easternmost) and the points with the same x-coordinate or y-coordinate as each extreme point.
 
 ### Example
@@ -550,56 +552,7 @@ The `main` method is the entry point of the program. It performs the following t
 `5.0 6.0`
 `7.0 8.0`
 `9.0 10.0`
-- Output:
 
-markdown
-Copy code
-## Task 16
-
-### Main Method
-
-The `main` method is the entry point of the program. It performs the following tasks:
-
-- It creates a `Scanner` object to read input from the user.
-- It reads the number of points from the user using `scanner.nextInt()`.
-- It consumes the newline character after reading the integer input using `scanner.nextLine()` to prepare for reading the point details.
-- It initializes an array of `Point` objects with the size specified by the user.
-- It iterates through each point:
-  - It reads the x-coordinate and y-coordinate for each point from the user.
-  - It creates a new `Point` object with the provided coordinates and stores it in the array.
-- It initializes four `Point` objects to store the extreme points (northernmost, southernmost, westernmost, easternmost) and assigns the first point in the array to each extreme point initially.
-- It iterates through the array of points and updates the extreme points if a point with a higher/lower y-coordinate (for northernmost/southernmost) or x-coordinate (for westernmost/easternmost) is found.
-- It calls the `printExtremePoints` method for each extreme point to print the points with the same x-coordinate or y-coordinate as the extreme point.
-- It closes the scanner.
-
-### Methods
-
-#### `printExtremePoints(Point[] points, float value)`
-
-- This method takes an array of points `points` and a float value `value` (representing either x-coordinate or y-coordinate of an extreme point) as input.
-- It iterates through the array of points.
-- Within the loop, it checks if the x-coordinate or y-coordinate of each point matches the provided value.
-- If a match is found, it prints the coordinates of the point.
-
-### Usage
-
-- Compile the `Task16.java` file along with the `Point` class (assuming it's defined in `week03.geometry` package).
-- Execute the generated class file.
-- Input the number of points followed by the coordinates of each point as specified by the prompts.
-- The program will output the extreme points (northernmost, southernmost, westernmost, easternmost) and the points with the same x-coordinate or y-coordinate as each extreme point.
-
-### Example
-
-- Input:
-5
-1.0 2.0
-3.0 4.0
-5.0 6.0
-7.0 8.0
-9.0 10.0
-
-diff
-Copy code
 - Output:
 `(1.0, 2.0)`
 `(3.0, 4.0)`
