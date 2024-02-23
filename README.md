@@ -779,3 +779,59 @@ If you call `toString()` on an Invoice object, it might give you a string like "
 
 Implementing `toString()` makes it easier to understand and work with objects in Java code.
 
+# Week05 
+## Task 1 
+When we create instance of `Y`. we call the constructor of `Y`. Before the execution of `Y`'s constructor, another constructor in the super class `X` invokes to the execution which is automatically inserted as default constructor of the super class. Thus, this constructor called first and prints "In constructor X.". After this, the constructor of `Y` subclass involves execution and prints "In constructor Y.".
+This is one of the main concepts of Java inheritance that, the constructors of subclasses and superclasses are called in hierarchical order which means that super class constructor always involves the execution initially.
+
+## Task 2
+The program implements several classes. Class A is a super class and class B is a sub class or extension of the A class. When we run the program, it prints like in the sequence below:
+`In static init block of A`
+`In static init block of B`
+`In instance init block of A`
+`In constructor A.`
+`In instance init block of B`
+`In constructor B.`
+First, the static initialization blocks are executed, because they are in class level and with the class itself, the blocks are loaded to Java Virtual Machine before the creation of the instances of classes. Also they are sequentially printed because their sequential initialization: First static block A and second static block B.
+
+On the other hand, instance intialization blocks are executed after static ones in the period of creation of instance. They are responsible for performation of actions that are specific to every object.
+
+Finally, the constructors are called after static and instance blocks have been executed. The constructors are responsible for ensurance of the complete initialization of object.
+
+## Task 3
+In this code, there are two concepts called method overriding and overloading. The `calcValue(int a)` method in the `Parent` class overridden in the `Child` class which is subclass of `Parent` class. In the concept of method overriding, the specific implementation of the method that is overridden is applied in subclass. Also the method overloading happened in the same method. So the `calcValue(int a)` method in the super class is overloaded with different parameters in the `Child` subclass like `calcValue(int a, int b)`. 
+
+After the creation of instance by constructor `Child()`, the `child.calcValue(5)` is called and the method in Parent class invokes to the execution and prints:
+`Super`
+`10`
+Then the `child.calcValue(5,10)` is called which obtains two arguments in the `Child` class. It means that the method in `Child` class is overridden and it has two arguments passed to the method call. After execution, it prints:
+`Subclass`
+`30`
+
+## Task 4
+The code defines class `A` and `GeneralType` (second one is subclass of first one). There are static blocks, instance initialization blocks and special constructors in these classes. The output of the code is:
+`AS`
+`GTS`
+`A`
+`5 AC`
+`GT`
+`GTC`
+1) Lets look at the output. The first printed one is `AS` which is inside the static block as it is explained that these blocks are executed initially when the class is loaded.
+
+2) `GTS` is also inside static block of subclass `GeneralType`, so it comes next. 
+
+3) So, for code's executability and for observation of the output, I added the instance `GeneralType obj = new GeneralType();` in the main class that I created and it is calling for the constructor `GeneralType`. The constructor of `GeneralType` first implicitly calls `super();` which invokes the no-argument constructor of class `A`. This results in printing `A`. 
+
+4) Then the `super(5);` statement inside the constructor parametrized constructor of class `A` with `5`. The result is `5 AC`
+
+5) After that, in the constructor of `A`, the instance initialization block `{ System.out.println("A"); }` is executed, printing `A`.
+
+6) Then, in the constructor of `GeneralType`, the instance initialization block `{ System.out.println("GT"); }` is executed, printing GT.
+
+7) Finally, in the constructor of `GeneralType`, `System.out.println("GTC");` is executed, printing `GTC`.
+
+
+
+
+
+
