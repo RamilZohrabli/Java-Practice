@@ -36,17 +36,21 @@ public class Point{
         double distance = Math.sqrt(Math.pow(distanceInX, 2) + Math.pow(distanceInY, 2));
         return (float)distance;
     }
-    public boolean equals(Point p){
-        return this.x == p.getX() && this.y == p.getY();
-    }
+    @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("(");
-        sb.append(x);
-        sb.append(", ");
-        sb.append(y);
-        sb.append(")");
-        return sb.toString();
+        return "(" + x + ", " + y + ")";
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Point other = (Point) obj;
+        return Float.compare(other.x, x) == 0 && Float.compare(other.y, y) == 0;
     }
     
 }

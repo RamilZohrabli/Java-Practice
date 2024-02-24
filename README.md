@@ -919,6 +919,23 @@ In the code, the `ClassB` extends `ClassA` which means that `ClassB` inherits pr
 ## Task 7 
 The initialization of methods in static type is their class level behavior that they are loaded into the memory once and it is efficient for memory saving. Additioanlly, static methods are effective for higher performance that they are resolved in compile time.
 
+## Task 8
+This program represents several classes: `Person`, `Teacher`, `Student`, and `PhdStudent`. There are specific attributes in every class like first name, last name, gender, and additional attributes that are specific for some of them. There is a strong inheritance in this code(single, hierarchical and multilevel). All of the classes extend to `Person` which is a direct representation of hierarchical structure. Single one is also between each sub class and super class. Another type of inheritance called multilevel one is associated between `Student`, `PhdStudent` and `Person` classes.
 
+## Task 9
+In the code, ther are different OOP aspects:
+1) Inheritance - The class `Account` extends `Customer` class and inherits properties
+2) Method Overriding - The `toString` method overridden in both classes for representation of objects in a string format
+3) Constructor Overloading - The class `Account` have multiple constructors which is the aspect of overloading with different parameters.
+4) Encapsulation - I think as the main aspect of OOP, the instances that are defined as private are encapsulated and with getter and setter methods, they are accessable.
+
+## Task 10
+As it is required in this task, I overridden the methods `toString()` and `equals()` in week03.geometry, in Point and Segment classes.
+
+## Task 11
+The `Rectangle` class defines attributes which are the width and heigth of rectangles. There is an overriding process of `equals()` method for comparison of dimensions of rectangles. 
+
+## Task 12
+The `Square` class extends to `Rectangle` class as explained previously. It has properties of `Rectangle` class and it adopted them by `super()` keyword. As discussed in the previous explanation, there is an ongoing comparison of dimension of rectangles and also the square.
 
 
