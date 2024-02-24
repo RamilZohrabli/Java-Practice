@@ -893,7 +893,7 @@ class D extends B, C { // This line causes compilation error in Java
 ```
 The compiler can not know which classes' method to use. This challenges the compiler to choose the correct method to call. 
 5) Hybrid inheritance: This is a type of inheritance that collects characteristics of another different inheritance types. For example:
-```java
+```java 
 class A{
 
 }
@@ -915,6 +915,9 @@ In this example, we can see the combination of single and multilevel inheritance
 
 ## Task 6
 In the code, the `ClassB` extends `ClassA` which means that `ClassB` inherits properties of `ClassA`. There are several methods in each class. The `methodTwo(int i)` is overridden in `ClassB` and the `methodOne(int i)` and `methodThree(int i)` hide the same named methods in `ClassA` , however, they are in different static or instance nature. Particularly, `methodFour(int i)` hides the static method `methodFour(int i)` of `ClassA`.
+
+## Task 7 
+The initialization of methods in static type is their class level behavior that they are loaded into the memory once and it is efficient for memory saving. Additioanlly, static methods are effective for higher performance that they are resolved in compile time.
 
 
 
