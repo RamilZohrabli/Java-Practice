@@ -893,7 +893,7 @@ class D extends B, C { // This line causes compilation error in Java
 ```
 The compiler can not know which classes' method to use. This challenges the compiler to choose the correct method to call. 
 5) Hybrid inheritance: This is a type of inheritance that collects characteristics of another different inheritance types. For example:
-```java 
+```
 class A{
 
 }
