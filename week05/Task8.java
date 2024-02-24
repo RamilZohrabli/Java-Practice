@@ -169,10 +169,34 @@ class PhdStudent extends Student{
 public class Task8 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Teeacher's details: ");
+        System.out.println("Teacher's details: ");
         String teacherFirstName = scan.nextLine();
         String teacherLastName = scan.nextLine();
         String teacherGender = scan.nextLine();
         String teacherDepartment = scan.nextLine();
+        String teacherCourses = scan.nextLine();
+
+        Teacher teacher = new Teacher(teacherFirstName, teacherLastName, teacherGender, teacherDepartment, teacherCourses);
+        System.out.println("Student's details: ");
+        String studentFirstName = scan.nextLine();
+        String studentLastName = scan.nextLine();
+        String studentGender = scan.nextLine();
+        String studentId = scan.nextLine();
+        
+        Student student = new Student(studentFirstName, studentLastName, studentGender,studentId);
+        System.out.println("PhdStudent's details: ");
+        String phdStudentFirstName = scan.nextLine();
+        String phdStudentLastName = scan.nextLine();
+        String phdStudentGender = scan.nextLine();
+        String phdStudentId = scan.nextLine(); 
+        String phdStudentDepartment = scan.nextLine();
+        String phdStudentCourses = scan.nextLine();
+
+        Student phdStudent = new PhdStudent(phdStudentFirstName, phdStudentLastName, phdStudentGender, phdStudentId, phdStudentDepartment, phdStudentCourses);
+        scan.close();
+        System.out.println(teacher);
+        System.out.println(student);
+        System.out.println(phdStudent);
+
     }
 }
