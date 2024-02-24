@@ -830,7 +830,91 @@ The code defines class `A` and `GeneralType` (second one is subclass of first on
 
 7) Finally, in the constructor of `GeneralType`, `System.out.println("GTC");` is executed, printing `GTC`.
 
+## Task 5
+Inheritance is a speciality of Java and also OOP that by which one sub class can inherit the properties of its super class. There are different types of inheritance:
+1) Single Inheritance: This type occurs when one subclass inherits the qualities from only one super class:
+```java
+class A{
 
+}
+class B extends A{
+
+}
+```
+It is as simpla as above. Only one bound between classes
+
+2) Multi-level inheritance: We have several classes that have parent-child relationship with each other in particular way. For example:
+```java
+class A{
+
+}
+class B extends A{
+
+}
+class C extends B{
+
+}
+```
+3) Hierarchical inheritance: This structure refers to the situation where a super class can have multiple sub classes and it forms hierarchical structure. For example:
+```java
+class A{
+
+}
+class B extends A{
+
+}
+class C extends A{
+
+}
+```
+In this simple example, B and C are the derivations of A superclass which is especially defined as hierarchical inheritance.
+4) Multiple inheritance: This is some kind different. Here, one or many subclasses can inherit properties of multiple super classes at the same time. This is not directly supported in java because of the "diamond problem". For example:
+```java
+class A {
+  void method(){
+    System.out.println("class A");
+  }
+}
+
+class B extends A {
+  void method() {
+          System.out.println("class B");
+      }
+}
+
+class C extends A {
+   void method() {
+          System.out.println("class C");
+      }
+}
+
+class D extends B, C { // This line causes compilation error in Java
+}
+```
+The compiler can not know which classes' method to use. This challenges the compiler to choose the correct method to call. 
+5) Hybrid inheritance: This is a type of inheritance that collects characteristics of another different inheritance types. For example:
+```java
+class A{
+
+}
+class B{
+
+}
+class C extends A{
+
+}
+class D extends B{
+
+}
+class E extends C{
+
+}
+```
+In this example, we can see the combination of single and multilevel inheritance types which creates hybrid inheritance structure.
+
+
+## Task 6
+In the code, the `ClassB` extends `ClassA` which means that `ClassB` inherits properties of `ClassA`. There are several methods in each class. The `methodTwo(int i)` is overridden in `ClassB` and the `methodOne(int i)` and `methodThree(int i)` hide the same named methods in `ClassA` , however, they are in different static or instance nature. Particularly, `methodFour(int i)` hides the static method `methodFour(int i)` of `ClassA`.
 
 
 
