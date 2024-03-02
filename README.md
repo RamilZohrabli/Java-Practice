@@ -939,3 +939,18 @@ The `Rectangle` class defines attributes which are the width and heigth of recta
 The `Square` class extends to `Rectangle` class as explained previously. It has properties of `Rectangle` class and it adopted them by `super()` keyword. As discussed in the previous explanation, there is an ongoing comparison of dimension of rectangles and also the square.
 
 
+# Week06
+## Task 6
+As the first step, we need to import `Point` and `Segment` classes from `week03` because we will work with these class. Then we create Movable interface which contains 4 methods. For the application of `Point` class, we create `MovePoint` class which implements Movable interface and apply all methods on the `point` member of `Point` class by overriding the methods and also we do the same thing for `Segment` class in the `week03`. As the next step, we create `Circle` class which has radius and coordinate instances and we implement interface methods in it. At the testing process, we scan variables and first execute the `Circle`. Then we create array of `movableObjects` and fill it with `Point`, `Segment` and `Circle` classes. As the last stage, we create method `moveAllOfThem` for the instructions that manages the points in specific direction. We implement this method by putting the input objects and direction in string format.
+
+## Task 7
+Initially, we create interface `Resizable` with method resize. We override this method in subclasses of abstract class `Shape`. Then, we declare `Shape` class with its attributes, constructors, getter setter and additional methods for functionality. There are abstract methods that their functionality is performed in sub classes of abstract class. The `circle`, `rectangle` and its subclass `square` have their pecuilar functionality, however they are related to each other because of the attribute dependence. We find the area of the circle in the `getArea()` method by the formula pi* radius ^2. The perimeter is the circumstance of the circle with formula 2*pi* radius. And the rectangle and square are similar to each other. `Square` is subclass of `Rectangle` super class, for this, we have an access to `Rectangle` properties with `super()` keyword. We also should override `toString` method because it is repeatedly declared in every class.
+
+## Task 8
+We import classes `Scanner` and `BigInteger`. `BigInteger` class is for the implementation of problems that can be revealed by limitation. We can work with this class for unlimited functionality. We scan integers and create methods for the calculuation of factorial and the power. 
+`BigInteger factorial = BigInteger.ONE` this statement represents the integer value `1` for calculation of factorial.
+
+## Task 9
+We implement `BigDecimal` class by importing it. It is very dimilar to the function of `BigInteger` class but it performs calculations on the decimal point values. It is very useful in the dealing with calculations of decimal point values for high precision.
+
+

@@ -1,6 +1,6 @@
 package week05;
 class Rectangle {
-    int width, height;
+    private int width, height;
     public Rectangle(int w, int h){
         width = w;
         height = h;

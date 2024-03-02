@@ -152,18 +152,8 @@ public class Task6{
                     break;
             }
         }
-        for (Movable obj : movableObjects) {
-            if (obj instanceof Circle) {
-                Circle circle = (Circle) obj;
-                System.out.println("Circle: (" + circle.getX() + ", " + circle.getY() + ")");
-            } else if (obj instanceof MovePoint) {
-                MovePoint movePoint = (MovePoint) obj;
-                System.out.println("MovePoint: (" + movePoint.getPoint().getX() + ", " + movePoint.getPoint().getY() + ")");
-            } else if (obj instanceof MoveSegment) {
-                MoveSegment moveSegment = (MoveSegment) obj;
-            }
-        }
+        
     }
-
 }
+
 
