@@ -953,4 +953,6 @@ We import classes `Scanner` and `BigInteger`. `BigInteger` class is for the impl
 ## Task 9
 We implement `BigDecimal` class by importing it. It is very dimilar to the function of `BigInteger` class but it performs calculations on the decimal point values. It is very useful in the dealing with calculations of decimal point values for high precision.
 
+## Task 10
+The provided code in the exercise is the representation of one of the Binary operation type adding. It implements the sum of 3 objects that are created in the main class. It is required to create another operations - subtraction, multiplication and division. I created the methods which are very similar to `Sum` method but their functionality is different. Then I created Unvary operator abstract class as it is required. I established some methods like `SquareRoot` and `Factorial` methods as unary operations. Then I implemented all of these methods in the main class. With the help of only 1 interface, we can easily implement different operations. 
 
