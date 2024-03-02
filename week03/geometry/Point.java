@@ -1,6 +1,6 @@
 package week03.geometry;
 
-public class Point{
+public class Point implements Cloneable{
     private float x;
     private float y;
     public Point(){
@@ -52,5 +52,18 @@ public class Point{
         Point other = (Point) obj;
         return Float.compare(other.x, x) == 0 && Float.compare(other.y, y) == 0;
     }
+
+    //The task 5 for week06 
+    // Shallow cloning
+    @Override
+    protected Point clone() {
+        try {
+            return (Point) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new Error("This can't happen!");
+        }
+    }
+    
+    
     
 }

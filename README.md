@@ -940,6 +940,39 @@ The `Square` class extends to `Rectangle` class as explained previously. It has 
 
 
 # Week06
+
+## Task 4
+We implemented `clone()` method for copying objects of `Rectangle` class. The declaration of `clone()` method in protected access modifier ensure its visibility as protected from the outside of `Object` class and restricts the access from outside classes. This method represents encapsulation. Protected is the best option. For example if we become more restrictive like we use `private`, we can not be able to override it in subclasses.
+
+## Task 5
+The implementation of `clone()` method in the `Point` and `Segment` classes is the shallow clone because the objects are cloned and the references of objects are copied, not the objects themselves. To fix this, we can consider deep cloning. For example:
+For `Point`:
+```java
+@Override
+protected Point clone() {
+    try {
+        Point clonedPoint = (Point) super.clone();
+        return new Point(this.x, this.y);
+    } catch (CloneNotSupportedException e) {
+        throw new Error("This can't happen!");
+    }
+}
+```
+For `Segment`:
+```java
+@Override
+protected Segment clone() {
+    try {
+        Segment clonedSegment = (Segment) super.clone();
+        clonedSegment.p1 = this.p1.clone();
+        clonedSegment.p2 = this.p2.clone();
+        return clonedSegment;
+    } catch (CloneNotSupportedException e) {
+        throw new Error("This can't happen!");
+    }
+}
+```
+When we clone the `Segment` and `Point` objects, new instances of them are created with the exactly same coordinates and ensures deep cloning. And it means that the changes do not affect original objects.
 ## Task 6
 As the first step, we need to import `Point` and `Segment` classes from `week03` because we will work with these class. Then we create Movable interface which contains 4 methods. For the application of `Point` class, we create `MovePoint` class which implements Movable interface and apply all methods on the `point` member of `Point` class by overriding the methods and also we do the same thing for `Segment` class in the `week03`. As the next step, we create `Circle` class which has radius and coordinate instances and we implement interface methods in it. At the testing process, we scan variables and first execute the `Circle`. Then we create array of `movableObjects` and fill it with `Point`, `Segment` and `Circle` classes. As the last stage, we create method `moveAllOfThem` for the instructions that manages the points in specific direction. We implement this method by putting the input objects and direction in string format.
 

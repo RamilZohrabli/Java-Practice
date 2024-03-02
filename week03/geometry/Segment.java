@@ -1,6 +1,6 @@
 package week03.geometry;
 
-public class Segment {
+public class Segment implements Cloneable{
     private Point p1, p2;
     public Segment(Point p1, Point p2){
         this.p1 = new Point(p1);
@@ -63,7 +63,18 @@ public class Segment {
         Segment other = (Segment) obj;
         return p1.equals(other.p1) && p2.equals(other.p2);
     }
+    //The task 5 for week06 
+    // Shallow cloning
+    @Override
+    protected Segment clone() {
+        try {
+            // Perform shallow cloning
+            return (Segment) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new Error("This can't happen!");
+        }
+    }
     
-
+    
 }
 
