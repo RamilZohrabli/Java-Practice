@@ -3,9 +3,10 @@ import java.util.Scanner;
 public class Factorial {
     public static void main(String[] args) {
 
-        Scanner scan = new Scanner(System.in);
+       
         int num;
-        try{
+        try{ 
+            Scanner scan = new Scanner(System.in);
 
               while (scan.hasNextInt()) {
             num = scan.nextInt();
@@ -14,11 +15,13 @@ public class Factorial {
             }
             
             System.out.printf("%d! is %d\n", num, factorial(num));
+            scan.close();
         }
+
     } catch (IllegalArgumentException e){
         System.out.println(e.getMessage());
     }
-        scan.close();
+        
     }
 
     static int factorial(int n) {
