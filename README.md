@@ -994,3 +994,6 @@ The provided code in the exercise is the representation of one of the Binary ope
 ## Task1
 I simply used `try` and `catch` blocks to handle the exception and to ignore the error for the normal flow of the code. 
 
+## Task2
+I used `try` and `catch` methods for showing the `IllegalArgumentException` error. When the user include negative number, the program automaticly says `Negative input is included`.
+
