@@ -1,3 +1,4 @@
+package week07;
 import java.io.FileNotFoundException;
 
 public class CustomExceptions {

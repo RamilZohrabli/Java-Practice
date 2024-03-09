@@ -1,4 +1,4 @@
-
+package week07;
 public class CustomUserGeneration {
     public static void main(String[] args) {
 

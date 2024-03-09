@@ -1,3 +1,4 @@
+package week07;
 import java.util.Scanner;
 
 public class CountLetters {

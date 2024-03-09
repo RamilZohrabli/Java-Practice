@@ -995,5 +995,5 @@ The provided code in the exercise is the representation of one of the Binary ope
 I simply used `try` and `catch` blocks to handle the exception and to ignore the error for the normal flow of the code. 
 
 ## Task2
-I used `try` and `catch` methods for showing the `IllegalArgumentException` error. When the user include negative number, the program automaticly says `Negative input is included`.
+I used `try` and `catch` blocks for showing the `IllegalArgumentException` error. When the user include negative number, the program automaticly says `Negative input is included`. Also it is not mandatory to use `try` and `catch`. And handling exceptions in the main method allows programmer to catch and handle these exceptions before they cause your program to terminate unexpectedly. So the reason I think is that, it guarantees the code's reliability and robustness
 

@@ -1,4 +1,4 @@
-
+package week07;
 public class Stack {
     private int[] elements;
     private int capacity;
