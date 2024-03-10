@@ -17,7 +17,7 @@ public class ParseNumbers {
             count++;
             }
             catch (NumberFormatException e){
-                System.out.println("The symbol \""  + word + "\" not an integer");
+                System.out.println("The symbol \""  + word + "\" is not an integer");
             }
     
             
