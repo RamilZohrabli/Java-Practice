@@ -16,15 +16,17 @@ public class ParseNumbers {
             sum += Integer.parseInt(word); // read it and parse into Integer
             count++;
             }
-            catch(NumberFormatException e){
-                System.out.println("Not valid format");
+            catch (NumberFormatException e){
+                System.out.println("The symbol \""  + word + "\" not an integer");
             }
+    
+            
         }
 
         scan.close();
 
         if (count == 0)
-            throw new IllegalArgumentException("Size is 0");
+            System.out.println("There are no VALID input provided!");
         else
             System.out.printf("Sum = %d\nCount = %d\nAverage = %.3f\n", sum, count, (float) sum / count);
     }

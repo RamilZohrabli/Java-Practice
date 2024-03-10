@@ -1001,5 +1001,10 @@ I used `try` and `catch` blocks for showing the `IllegalArgumentException` error
 I copy pasted `Invoice` class from `week03` folder and modified its methods. I included the `IllegalArgumentException`. If the quantity and the price of item is negative, the program will show the message that `Quantity cannot be negative` and `Price per item cannot be negative` relatively
 
 ## Task4
-I copied `Customer` and its subclass `Amount` classes from week05 folder and I changed functionality. I created `InvalidAmountException` for handling the error. If included the withdraw amount is more than the balance, the program shows the message: "Withdrawal amount cannot be more than the balance"
+I copied `Customer` and its subclass `Amount` classes from week05 folder and I changed functionality. I created `InvalidAmountException` for handling the error. If included the withdraw amount is more than the balance, the program shows the message: `Withdrawal amount cannot be more than the balance`
 
+## Task5
+In the code provided, I included `IllegalArgumentException` to the `createUser` method. If the roles is null or empty, this exception will be executed by the help of included catch block in the main method. 
+
+## Task6
+In the code, I included `try` and `catch` blocks inside while loop for checking if the input is number or not by `NumberFormatException`. If there is a such kind of non-integer character, the program ignores the non-integer and calculates the result of numbers included.

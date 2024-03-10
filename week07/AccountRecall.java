@@ -82,26 +82,24 @@ public class AccountRecall {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        // Prompt user to enter account details
         System.out.println("Account ID:");
         int accountId = scanner.nextInt();
-        scanner.nextLine(); // consume the newline character
+        scanner.nextLine(); 
         
         System.out.println("Customer ID:");
         int customerId = scanner.nextInt();
-        scanner.nextLine(); // consume the newline character
+        scanner.nextLine(); 
         
         System.out.println("Customer name:");
         String customerName = scanner.nextLine();
         
         System.out.println("Customer gender:");
         char customerGender = scanner.next().charAt(0);
-        scanner.nextLine(); // consume the newline character
+        scanner.nextLine();
         
         System.out.println("Initial balance:");
         double initialBalance = scanner.nextDouble();
         
-        // Create an account object with the entered details
         Account account = new Account(accountId, customerId, customerName, customerGender, initialBalance);
         
         try {
