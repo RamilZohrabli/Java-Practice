@@ -997,3 +997,9 @@ I simply used `try` and `catch` blocks to handle the exception and to ignore the
 ## Task2
 I used `try` and `catch` blocks for showing the `IllegalArgumentException` error. When the user include negative number, the program automaticly says `Negative input is included`. Also it is not mandatory to use `try` and `catch`. And handling exceptions in the main method allows programmer to catch and handle these exceptions before they cause your program to terminate unexpectedly. So the reason I think is that, it guarantees the code's reliability and robustness
 
+## Task3 
+I copy pasted `Invoice` class from `week03` folder and modified its methods. I included the `IllegalArgumentException`. If the quantity and the price of item is negative, the program will show the message that `Quantity cannot be negative` and `Price per item cannot be negative` relatively
+
+## Task4
+I copied `Customer` and its subclass `Amount` classes from week05 folder and I changed functionality. I created `InvalidAmountException` for handling the error. If included the withdraw amount is more than the balance, the program shows the message: "Withdrawal amount cannot be more than the balance"
+
