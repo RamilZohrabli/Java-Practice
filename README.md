@@ -1012,3 +1012,9 @@ In the code, I included `try` and `catch` blocks inside while loop for checking 
 # Week08
 ## Task1
 I created several lists named as `shoppingList`, `newShoppingList` and linked list named as `newLinkedList` and added particular elements to them. Then I implemented several functions like printing, removing element at index, removing particular element, checking function and etc c.
+
+## Task2 
+First I created `number` list and added random number in unsorted order. Then I implemented several methods like `Collections.sort()` and `List.sort()` for sorting the list. Also I implemented `Comparator` interface by using anonymous and concrete classes.
+
+## Task3 
+For the representation of full name, I created `Account` class which implements `Comparable` interface. I created, fields, constructor and getter methods. Then I overriden `toString()` method for the suitable output representation. I overriden `compareTo()` method for comparing fields. In the main method I initialized List and added some names, surnames and account amounts. I printed and sorted the elements with `for-each` loops. For sorting balance, I used from `Comparator` interface.
