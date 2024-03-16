@@ -1008,3 +1008,7 @@ In the code provided, I included `IllegalArgumentException` to the `createUser` 
 
 ## Task6
 In the code, I included `try` and `catch` blocks inside while loop for checking if the input is number or not by `NumberFormatException`. If there is a such kind of non-integer character, the program ignores the non-integer and calculates the result of numbers included.
+
+# Week08
+## Task1
+I created several lists named as `shoppingList`, `newShoppingList` and linked list named as `newLinkedList` and added particular elements to them. Then I implemented several functions like printing, removing element at index, removing particular element, checking function and etc c.
