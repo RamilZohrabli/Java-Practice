@@ -1018,3 +1018,17 @@ First I created `number` list and added random number in unsorted order. Then I 
 
 ## Task3 
 For the representation of full name, I created `Account` class which implements `Comparable` interface. I created, fields, constructor and getter methods. Then I overriden `toString()` method for the suitable output representation. I overriden `compareTo()` method for comparing fields. In the main method I initialized List and added some names, surnames and account amounts. I printed and sorted the elements with `for-each` loops. For sorting balance, I used from `Comparator` interface.
+
+## Task4
+i. We can ensure the retainment of the order in the process of elimination of duplicates by using `LinkedHashSet`. This maintains the order of the input or elements unlike `HashSet`. 
+ii. For this, I used `TreeSet` because it is for automatical sorting the elements in normal order(if it is string, it is alphabetical order). 
+For example, when I included 3 names, printing process of `LinkedHashSet` will be based on insertion order, while `TreeSet` will ensure alphabetical order.
+
+## Task5
+The code solves the problem for queue. The `bread` array represents the wanted number of breads for each person. `totalBreads` shows the total number of breads in the store. `calculateNumber` method is the key factor for this code. In this code, the queue is instansiated by using `Queue`. The method iterates though the list for checking if there is enough bread in the market. If not, it breaks loop and returns the number of persons can buy bread from store. However, it is not for finding the maximum possibility of selling or the maximum number of people can buy bread. In the next code, I will implement this.
+
+## Task6
+This code is similar to previous task except usage of `PriorityQueue`. This is for special functionality which gives the maximum number of persons that can buy bread from store. As `Queue`, we should also import it for using.
+
+
+
