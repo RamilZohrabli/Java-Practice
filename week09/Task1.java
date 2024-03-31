@@ -1,6 +1,5 @@
 package week09;
 import java.util.PriorityQueue;
-
 class Task implements Comparable<Task> {
     String name;
     int priority;
