@@ -1030,5 +1030,20 @@ The code solves the problem for queue. The `bread` array represents the wanted n
 ## Task6
 This code is similar to previous task except usage of `PriorityQueue`. This is for special functionality which gives the maximum number of persons that can buy bread from store. As `Queue`, we should also import it for using.
 
+# Week08
+## Task1 
+The code defines a `Task` class representing tasks with attributes like name, priority, and duration. It implements the `Comparable` interface to enable comparison based on priority. In the `Main` class, a `PriorityQueue` is created to store tasks. Tasks are added to the queue and iterated through in priority order. Each task is completed within the available time, and the completed tasks are printed. The total time spent on tasks is compared to the available time.
 
+Variant d involves comparing the total time spent on tasks to the available time. If they are equal, it indicates efficient utilization of available time. If they are not equal, it suggests discrepancies in task completion or durations.
 
+## Task2
+I created in the code two `LinkedLists`, each with 1000 random integers. Method 1 adds integers in sorted order, while Method 2 adds all integers and sorts the list afterward. Both methods measure construction time in milliseconds. The `addInSortedOrder` method ensures sorted insertion by iterating through the list to find the appropriate position for each integer.
+
+## Task3
+The code takes a hardcoded string "hello" and prints each character along with its indexes in ascending and descending order. It uses a `TreeMap` to store characters as keys and their indexes as values, ensuring alphabetical ordering. Then, it iterates over the map and prints each character followed by its indexes.
+
+## Task4
+This code provides methods to find the most and least frequent characters in a given input string. It employs a caching mechanism to store the character frequencies for each input string, ensuring that subsequent calls with the same input utilize cached results. The `mostFrequentCharacter` method returns the character with the highest frequency, while the leastFrequentCharacter method returns the character with the lowest frequency. Both methods use a nested `HashMap` to store the frequency of each character in the input string.
+
+## Task5
+This Java code provides a method to find the unique characters in a given input string. It uses caching mechanism to store the unique characters for each input string, improving efficiency by avoiding redundant calculations for repeated inputs. The `uniqueCharacters` method returns the set of unique characters, either retrieving it from the cache or calculating it if not already cached.
