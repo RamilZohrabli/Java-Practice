@@ -1030,7 +1030,7 @@ The code solves the problem for queue. The `bread` array represents the wanted n
 ## Task6
 This code is similar to previous task except usage of `PriorityQueue`. This is for special functionality which gives the maximum number of persons that can buy bread from store. As `Queue`, we should also import it for using.
 
-# Week08
+# Week09
 ## Task1 
 The code defines a `Task` class representing tasks with attributes like name, priority, and duration. It implements the `Comparable` interface to enable comparison based on priority. In the `Main` class, a `PriorityQueue` is created to store tasks. Tasks are added to the queue and iterated through in priority order. Each task is completed within the available time, and the completed tasks are printed. The total time spent on tasks is compared to the available time.
 
@@ -1047,3 +1047,7 @@ This code provides methods to find the most and least frequent characters in a g
 
 ## Task5
 This Java code provides a method to find the unique characters in a given input string. It uses caching mechanism to store the unique characters for each input string, improving efficiency by avoiding redundant calculations for repeated inputs. The `uniqueCharacters` method returns the set of unique characters, either retrieving it from the cache or calculating it if not already cached.
+
+# Week10
+## Task1
+This Java code defines a class `Generics` with generic methods for array manipulation like printing, finding middle and maximum elements, sorting, and swapping. The `Task1` class contains the `main` method, which prompts the user to input values for arrays of different types (integers, doubles, strings, tasks, points). These values are stored in corresponding arrays using a `Scanner`. Finally, the generic methods from `Generics` are used to print the arrays.
