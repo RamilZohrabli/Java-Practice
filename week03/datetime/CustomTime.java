@@ -38,15 +38,6 @@ public class CustomTime {
     public int getSecond(){
         return second;
     }
-    public void setHour(){
-        this.hour = hour;
-    }
-    public void setMinute(){
-        this.minute = minute;
-    }
-    public void setSecond(){
-        this.second = second;
-    }
     public String toUniversalString(){
         return String.format("%02d:%02d:%02d", hour, minute, second);
     }

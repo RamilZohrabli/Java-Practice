@@ -18,5 +18,6 @@ public class CoinTossing {
         double tailProbability = (double) tail / n;
         System.out.println(headProbability);
         System.out.println(tailProbability);
+        scan.close();
     }
 }

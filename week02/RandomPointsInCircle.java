@@ -15,6 +15,7 @@ public class RandomPointsInCircle {
                 System.out.println("(" + x + ", " + y + ")");
             }
         }
+        scan.close();
     }
 }
 

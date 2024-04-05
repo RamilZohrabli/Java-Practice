@@ -17,5 +17,6 @@ public class Digits {
         System.out.println(sum);
         System.out.println(product);
         System.out.println(average);
+        scan.close();
     }
 }
