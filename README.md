@@ -1051,3 +1051,12 @@ This Java code provides a method to find the unique characters in a given input 
 # Week10
 ## Task1
 This Java code defines a class `Generics` with generic methods for array manipulation like printing, finding middle and maximum elements, sorting, and swapping. The `Task1` class contains the `main` method, which prompts the user to input values for arrays of different types (integers, doubles, strings, tasks, points). These values are stored in corresponding arrays using a `Scanner`. Finally, the generic methods from `Generics` are used to print the arrays.
+
+## Task2
+In this java code, I creaated `Generics` class for establishment of different methods like `reciprocal()`, `fraction()`, `absValueOfDouble()`, and `absValueOfFloat()`. In main code, I employed `Scanner` class for getting value from user and implemented the methods.
+
+## Task3
+In this Java code, I created a `Pair` class using generics to establish a container for holding pairs of different types. In the `Task3` class, I employed the `Scanner` class to collect user input for creating two pairs, each consisting of a pair of items and an optional comment. After gathering the user input, I instantiated the pairs (pair1 and pair2) using the values provided by the user. Finally, I printed out the created pairs along with their comments.
+
+## Task4
+In this Java code, I've created a `Task4` class representing bank accounts and implemented a generic method `countElementsWithProperty` to count elements in a collection based on a specified property checker. Three test methods (`testEvenIntegers`, `testPalindromeStrings`, and `testEmptyAccounts`) demonstrate the functionality of the countElementsWithProperty method. Using the PropertyChecker interface and its implementations (`EvenIntegerChecker`, `PalindromeStringChecker`, `EmptyAccountChecker`), elements are evaluated against specific properties. Finally, the `main` method invokes the test methods and prints the results.
