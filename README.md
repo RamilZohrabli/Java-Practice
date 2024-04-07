@@ -1060,3 +1060,8 @@ In this Java code, I created a `Pair` class using generics to establish a contai
 
 ## Task4
 In this Java code, I've created a `Task4` class representing bank accounts and implemented a generic method `countElementsWithProperty` to count elements in a collection based on a specified property checker. Three test methods (`testEvenIntegers`, `testPalindromeStrings`, and `testEmptyAccounts`) demonstrate the functionality of the countElementsWithProperty method. Using the PropertyChecker interface and its implementations (`EvenIntegerChecker`, `PalindromeStringChecker`, `EmptyAccountChecker`), elements are evaluated against specific properties. Finally, the `main` method invokes the test methods and prints the results.
+
+## Task5
+In this Java code, I've created a `Task5` class representing a generic stack implementation with methods for pushing, popping, and peeking elements. It also includes custom exception classes `StackFullException` and `StackEmptyException` for handling full and empty stack conditions.
+
+I've included a main method within the `Task5` class to demonstrate its functionalities. The main method creates an instance of `Task5` for integers, pushes elements onto the stack, attempts to push onto a full stack, then pops and peeks elements while handling exceptions for empty stack conditions.
