@@ -5,13 +5,11 @@ public class Task5<T> {
     private int top;
     private T[] stackArray;
 
-    // Constructor
     public Task5(int size) {
         this.maxSize = size;
         this.top = -1;
     }
 
-    // Push operation
     public void push(T element) throws StackFullException {
         if (isFull()) {
             throw new StackFullException("Stack is full");
@@ -19,7 +17,6 @@ public class Task5<T> {
         stackArray[++top] = element;
     }
 
-    // Pop operation
     public T pop() throws StackEmptyException {
         if (isEmpty()) {
             throw new StackEmptyException("Stack is empty");
@@ -27,7 +24,6 @@ public class Task5<T> {
         return stackArray[top--];
     }
 
-    // Peek operation
     public T peek() throws StackEmptyException {
         if (isEmpty()) {
             throw new StackEmptyException("Stack is empty");
@@ -35,12 +31,10 @@ public class Task5<T> {
         return stackArray[top];
     }
 
-    // Check if stack is empty
     public boolean isEmpty() {
         return (top == -1);
     }
 
-    // Check if stack is full
     public boolean isFull() {
         return (top == maxSize - 1);
     }
