@@ -1065,3 +1065,20 @@ In this Java code, I've created a `Task4` class representing bank accounts and i
 In this Java code, I've created a `Task5` class representing a generic stack implementation with methods for pushing, popping, and peeking elements. It also includes custom exception classes `StackFullException` and `StackEmptyException` for handling full and empty stack conditions.
 
 I've included a main method within the `Task5` class to demonstrate its functionalities. The main method creates an instance of `Task5` for integers, pushes elements onto the stack, attempts to push onto a full stack, then pops and peeks elements while handling exceptions for empty stack conditions.
+
+# Week11
+## Task1 
+b. The output is compilation error. The error associates with the code in the `catch` and `finally` blocks of the testFinally() method. Output will be like this:
+`Exception in thread "main" java.lang.Error: Unresolved compilation problem: Unreachable catch block for ExceptionDemo1. This exception is never thrown from the try statement body`
+`at week11.FinallyDemo.testFinally(FinallyDemo.java:14)`
+`at week11.FinallyDemo.main(FinallyDemo.java:5)`
+
+c. I modified `ExceptionDemo1` with `Exception4` for being compatible with the try block. Another issue is in `finally` block. We can not throw an exception from `finally` block which can hide the exception handling inside `try` and `catch` above. For this, I created nested blocks that I handled the exception inside `finally` with `try-catch` block.
+
+d.In the modified code, the output will be throwing all of the exceptions that are catched:
+`week11.ExceptionDemo3`
+        `at week11.Task1.testFinally(Task1.java:19)`
+        `at week11.Task1.main(Task1.java:6)`
+`week11.ExceptionDemo2`
+        `at week11.Task1.testFinally(Task1.java:16)`
+        `at week11.Task1.main(Task1.java:6)`
