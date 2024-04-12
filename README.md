@@ -1100,3 +1100,15 @@ The main difference between `read()` and `read(byte[])` is that The read() metho
 The classes are `FileInputStream`, `FileOutputStream`, `FileReader` and `FileWriter`. For duplication, we first read the original file and write the content to the duplicate file. 
 
 I duplicated the content into `duplicate_output.txt` file 
+
+## Task4
+In this code, I've created a file named "test.txt" with the content "Coding!". I then read the file twice: once character by character using the `read()` method and once using the `read(char[]) method`. I store the content in a `StringBuilder`. Finally, I print out the content read using the `read(char[])` method.
+
+The main difference is that `read()` method reads one character at a time, while `read(char[])` is able to read multiple characters into buffer array.
+
+## Task6
+In this code, I've defined a `Person` class with `name` and `age` attributes, along with methods for accessing and modifying them. Within the `Task6` class, I've implemented methods for saving an array of Person objects to a binary file using `ObjectOutputStream`, and for reading and printing these objects from the file using `ObjectInputStream`. In the main method, I've initialized an array of Person objects, saved them to a file named "persons.bin", and then read and printed them back.
+
+In the provided code, I do not explicitly use the EOF (End of File) indicator. However, the code relies on EOFException, which is thrown by ObjectInputStream when it reaches the end of the stream while reading objects.
+
+To ensure that all persons are read from the file, I use a null sentinel value. 
