@@ -1095,3 +1095,8 @@ ii. Using the `read(byte[])` method to read the content of the file into a byte 
 Each step is followed by closing the respective streams to release system resources.
 
 The main difference between `read()` and `read(byte[])` is that The read() method reads one byte at a time, while the `read(byte[])` method reads multiple bytes at once into a byte array.
+
+## Task3
+The classes are `FileInputStream`, `FileOutputStream`, `FileReader` and `FileWriter`. For duplication, we first read the original file and write the content to the duplicate file. 
+
+I duplicated the content into `duplicate_output.txt` file 
