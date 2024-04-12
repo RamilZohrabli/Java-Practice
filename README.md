@@ -1082,3 +1082,16 @@ d.In the modified code, the output will be throwing all of the exceptions that a
 `week11.ExceptionDemo2`
         `at week11.Task1.testFinally(Task1.java:16)`
         `at week11.Task1.main(Task1.java:6)`
+
+## Task2
+In this Java code, I've created a `Task2`. The main method demonstrates various file operations:
+
+a. Storing the string "Java" in a file named "output.txt" using `FileOutputStream`.
+b. Checking the content of the file by printing it line by line using `BufferedReader`.
+c. Reading the content of the file using `FileInputStream`:
+
+i. Using the `read()` method to read the content of the file byte by byte and appending it to a `StringBuilder`.
+ii. Using the `read(byte[])` method to read the content of the file into a byte array (`b`) and then converting the byte array to a string, appending it to a `StringBuilder`.
+Each step is followed by closing the respective streams to release system resources.
+
+The main difference between `read()` and `read(byte[])` is that The read() method reads one byte at a time, while the `read(byte[])` method reads multiple bytes at once into a byte array.
