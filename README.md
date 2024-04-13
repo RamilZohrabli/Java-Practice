@@ -1112,3 +1112,15 @@ In this code, I've defined a `Person` class with `name` and `age` attributes, al
 In the provided code, I do not explicitly use the EOF (End of File) indicator. However, the code relies on EOFException, which is thrown by ObjectInputStream when it reaches the end of the stream while reading objects.
 
 To ensure that all persons are read from the file, I use a null sentinel value. 
+
+## Task7
+In the `Task7` class, I've implemented two methods for file system traversal and information retrieval.
+
+With the `printFileInfo(String path)` method, I print details about a specified file or directory, such as its name, path, size, and permissions.
+
+Using the `traverseDirectory(String path)` method, I recursively traverse directories starting from the given path, printing information for each file and directory encountered.
+
+In the main method, I specify a directory path to begin the traversal process.
+
+## Task9 
+I created `persons.csv` file and added information of persons like their names, surnames, IDs and ages. Then in the code, I read this file, skipping the header row. For each row of data, I create a `PersonCSV` object with `ID, first name, last name, and age`, storing these objects in a list. Then, I calculate the average age of all people in the list. I iterate through the list again, categorizing people into two groups: those with ages below the average and those with ages above the average. Finally, I write the information of people in each group to separate CSV files named "under_average_age.csv" and "above_average_age.csv". If any errors occur during file reading or writing, I print the stack trace for debugging.
