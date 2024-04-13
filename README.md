@@ -1106,6 +1106,11 @@ In this code, I've created a file named "test.txt" with the content "Coding!". I
 
 The main difference is that `read()` method reads one character at a time, while `read(char[])` is able to read multiple characters into buffer array.
 
+## Task5
+The purpose is to efficiently read text from the file by buffering the input, reducing I/O operations and improving performance.
+
+Wrapping one stream object in another adds functionality and efficiency. In this case, it adds buffering capability, improves reading performance, and provides convenient methods for handling character-based input.
+
 ## Task6
 In this code, I've defined a `Person` class with `name` and `age` attributes, along with methods for accessing and modifying them. Within the `Task6` class, I've implemented methods for saving an array of Person objects to a binary file using `ObjectOutputStream`, and for reading and printing these objects from the file using `ObjectInputStream`. In the main method, I've initialized an array of Person objects, saved them to a file named "persons.bin", and then read and printed them back.
 
