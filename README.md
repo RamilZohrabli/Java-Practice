@@ -1127,5 +1127,9 @@ Using the `traverseDirectory(String path)` method, I recursively traverse direct
 
 In the main method, I specify a directory path to begin the traversal process.
 
+## Task8
+
+I create a Java program that performs various operations on a file containing random integers. First, I generate a file with a specified number of random integers. Then, I read and print all integers from the file. After that, I print a specified number of integers starting from a given offset in the file. Finally, I print them of integers in reverse order from the end of the file. Each operation is performed using a RandomAccessFile, allowing for efficient reading and manipulation of the file's contents.
+
 ## Task9 
 I created `persons.csv` file and added information of persons like their names, surnames, IDs and ages. Then in the code, I read this file, skipping the header row. For each row of data, I create a `PersonCSV` object with `ID, first name, last name, and age`, storing these objects in a list. Then, I calculate the average age of all people in the list. I iterate through the list again, categorizing people into two groups: those with ages below the average and those with ages above the average. Finally, I write the information of people in each group to separate CSV files named "under_average_age.csv" and "above_average_age.csv". If any errors occur during file reading or writing, I print the stack trace for debugging.
