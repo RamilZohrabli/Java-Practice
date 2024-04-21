@@ -1152,3 +1152,48 @@ In the `Task2` class, I used lambda expressions to create specific conditions:
 * `isOlderThan20` checks if a `Person` is older than 20.
 
 I tested these conditions in the main method and used `filter` to get odd numbers from a list of 1 to 10. This code snippet showcases how to use lambda expressions, functional interfaces, and custom conditions to manipulate collections.
+
+## Task3
+I created the `Calculator` functional interface with a method `calculate(double a, double b)`. This method returns a double result based on the input parameters. In the main class, I defined lambda expressions to implement common mathematical operations.
+
+First, I created lambdas for addition, subtraction, multiplication, division, and exponentiation:
+
+* `addition`: returns the sum of two numbers.
+* `subtraction`: returns the difference between two numbers.
+* `multiplication`: returns the product of two numbers.
+* `division`: returns the quotient of two numbers.
+* `exponentiation`: returns the result of one number raised to the power of another.
+
+Then, I used these lambda expressions to perform calculations and printed the results:
+
+* Addition of 1 and 2 gave 3.
+* Subtraction of 2 from 4 resulted in 2.
+* Multiplication of 3 by 4 produced 12.
+* Division of 4 by 2 resulted in 2.
+* Exponentiation of 2 to the 4th power gave 16.
+
+This approach demonstrates how lambda expressions can be used to implement functional interfaces and perform various calculations in a concise manner.
+
+## Task4
+First, I create a `Supplier` to generate a list of numbers from 1 to 10. Next, I use a `Function` to square each number in the list, collecting the results in a new list. Then, I create a `Predicate` to check if a number is even and use a `Consumer` to print out even numbers from the squared list.
+
+Finally, I use another `Consumer` to print all squared numbers in the list. This is done with a lambda expression that loops through each element and prints it.
+
+## Task5
+I created an `Employee` class with three private fields: `firstName`, `age`, and `salary`. This class has getter methods for each field, a constructor for initializing the fields, and a toString method for representing an `Employee` object as a string.
+
+In the `Task5` class, I created an array of three `Employee` objects with different `firstName`, `age`, and `salary` values. Using lambda expressions, I sorted the array in three different ways:
+
+1. By `firstName` using `compareTo` to compare the string values.
+2. By `age` using `Integer.compare` to compare the integer values.
+3. By `salary` using `Double.compare` to compare the double values.
+After each sort operation, I printed the sorted array to the console, showing the output in the order determined by the sorting criteria. The lambda expressions in the `Arrays.sort`method allowed for a clear and concise sorting logic.
+
+## Task6
+I wrote a code snippet that shows several operations using Java streams. It starts with a list of integers from 1 to 10. I used the `allMatch` method to check if all numbers are even, which returned false. Then, I used `anyMatch` to see if any number was even, and it returned true. Next, I verified that none of the numbers were negative using `noneMatch`, and this was also true.
+
+To count the total number of elements, I used `count`, which showed there were 10 items. I generated 5 random numbers with `Stream.generate` and `limit`, and printed them with `forEach`. I found the first element in the list using `findFirst`, and any element using `findAny`. Both were present, and I printed them.
+
+I also filtered the list to get only the even numbers, sorted them, and collected them into a new list. Then, I mapped each number to a string that starts with "Number: ", collecting them into another list. Finally, I used `reduce` to calculate the sum of all numbers, which I printed.
+
+
