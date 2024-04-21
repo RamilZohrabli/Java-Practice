@@ -1133,3 +1133,22 @@ I create a Java program that performs various operations on a file containing ra
 
 ## Task9 
 I created `persons.csv` file and added information of persons like their names, surnames, IDs and ages. Then in the code, I read this file, skipping the header row. For each row of data, I create a `PersonCSV` object with `ID, first name, last name, and age`, storing these objects in a list. Then, I calculate the average age of all people in the list. I iterate through the list again, categorizing people into two groups: those with ages below the average and those with ages above the average. Finally, I write the information of people in each group to separate CSV files named "under_average_age.csv" and "above_average_age.csv". If any errors occur during file reading or writing, I print the stack trace for debugging.
+
+# Week12
+## Task1
+First, I create `AFuncInt`(a functional interface) in the beginning of code with 3 methods: abstact `apply`, and two overloaded void return type `print` methods that get String variables and print them. Then, in the main method, I create an instance of anonymous class and also used lambda expressions to implement the interface separately. The output is not the same, because I included the implementation of abstract method of interface inside lambda expression unless it was not included in the instantiation with anonymous class.
+
+## Task2
+
+I created a `SpecificProperty` interface with a `check` method that returns a boolean. It allows me to define custom conditions to evaluate different data types like `Point` and `Person`.
+
+In the `Utility` class, I added a `filter` method that takes a collection and a `SpecificProperty`, then returns a new collection with elements that meet the condition defined by `SpecificProperty`.
+
+In the `Task2` class, I used lambda expressions to create specific conditions:
+
+* `isOdd1` checks if a number is odd.
+* `isInFirstQuadrant` checks if a `Point` has positive x and y.
+* `isPangram` checks if a string contains every letter from 'a' to 'z'.
+* `isOlderThan20` checks if a `Person` is older than 20.
+
+I tested these conditions in the main method and used `filter` to get odd numbers from a list of 1 to 10. This code snippet showcases how to use lambda expressions, functional interfaces, and custom conditions to manipulate collections.
