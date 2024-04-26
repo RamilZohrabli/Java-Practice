@@ -1196,4 +1196,6 @@ To count the total number of elements, I used `count`, which showed there were 1
 
 I also filtered the list to get only the even numbers, sorted them, and collected them into a new list. Then, I mapped each number to a string that starts with "Number: ", collecting them into another list. Finally, I used `reduce` to calculate the sum of all numbers, which I printed.
 
-
+# Week13
+## Task1
+I developed a Java program to count words in a file both sequentially and concurrently. The sequential method reads the file line by line, counts valid words with more than three alphabetic characters, and measures the time taken. In contrast, the concurrent approach uses a `WordCountThread` class to split the work across multiple threads, dividing the file into chunks and allowing parallel processing. Each thread counts the valid words in its chunk, and then the total word count and time taken are calculated by summing the results from all threads. In the `Task1` class, I demonstrated both approaches, calling the sequential method first, then the concurrent method, and comparing the results. This illustrates how multithreading can improve performance in word-counting tasks.
