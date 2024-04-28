@@ -1214,4 +1214,8 @@ The `Task2` class has a method to read tasks from the CSV and another to execute
 In the `main` method, I ran the tasks with one executor, one executor per CPU core, and one executor per task, printing the time taken for each setup to compare their performance.
 
 ## Task3
+I created a Java program with two threads: an `Incrementor` that increases a shared counter and a `Reader` that reads its value. The `Counter` class has a synchronized method for incrementing an `int` variable and another for getting its current value. I set each thread to run a specified number of times (N).
 
+In the `Incrementor` thread, I incremented the counter N times, ensuring synchronization to avoid race conditions. In the `Reader` thread, I read the counter's value N times, again with synchronization to ensure thread safety.
+
+In the `main` method, I started both threads and waited for them to finish using `join()`. Once both threads completed their tasks, I printed a message indicating that the operations were done.
