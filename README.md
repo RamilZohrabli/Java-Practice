@@ -1219,3 +1219,16 @@ I created a Java program with two threads: an `Incrementor` that increases a sha
 In the `Incrementor` thread, I incremented the counter N times, ensuring synchronization to avoid race conditions. In the `Reader` thread, I read the counter's value N times, again with synchronization to ensure thread safety.
 
 In the `main` method, I started both threads and waited for them to finish using `join()`. Once both threads completed their tasks, I printed a message indicating that the operations were done.
+
+## Task4
+
+I created a Java program to simulate a shoemaker shop with producers and consumers. The `ShoeShop` class manages a stock of shoes with synchronized methods, using `wait()` and `notify()` to handle full and empty conditions.
+
+I made `Producer` threads to create shoes and `Consumer` threads to buy them. If the stock is full, producers stop and wait; if it's empty, consumers wait for new shoes.
+
+In the `main` method, I tested three scenarios:
+
+One producer, one consumer.
+One producer, multiple consumers.
+Multiple producers, one consumer.
+Each scenario demonstrates thread synchronization and coordination in a shared environment. The main thread waits for all others to complete before ending.
