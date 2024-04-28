@@ -1198,4 +1198,20 @@ I also filtered the list to get only the even numbers, sorted them, and collecte
 
 # Week13
 ## Task1
-I developed a Java program to count words in a file both sequentially and concurrently. The sequential method reads the file line by line, counts valid words with more than three alphabetic characters, and measures the time taken. In contrast, the concurrent approach uses a `WordCountThread` class to split the work across multiple threads, dividing the file into chunks and allowing parallel processing. Each thread counts the valid words in its chunk, and then the total word count and time taken are calculated by summing the results from all threads. In the `Task1` class, I demonstrated both approaches, calling the sequential method first, then the concurrent method, and comparing the results. This illustrates how multithreading can improve performance in word-counting tasks.
+I wrote a code snippet that counts words in a text file both sequentially and concurrently. I created a file with test content using `BufferedWriter`. For the sequential count, I read the file line by line with `BufferedReader`, splitting each line into tokens and counting those with more than three symbols.
+
+For concurrent word counting, I used a thread pool to process chunks of 300 lines. Each chunk was given to a `WordCountWorker`, which counted the words in its assigned lines. After all threads completed, I combined their results to get the total word count.
+
+I then measured the time taken for both approaches and printed the results for comparison. This allowed me to analyze the performance difference between sequential and concurrent word counting.
+
+## Task2
+I created a Java program that writes a CSV file with 10 random tasks, each with a unique ID and a duration between 500 and 1500 milliseconds. The `Task` class holds the task ID and duration.
+
+The `ParallelTaskExecutor` class extends `Thread` and takes tasks from a `BlockingQueue`. It simulates execution by sleeping for the specified duration and updates a shared counter to track completed tasks.
+
+The `Task2` class has a method to read tasks from the CSV and another to execute tasks with a specified number of parallel task executors, measuring the total time taken.
+
+In the `main` method, I ran the tasks with one executor, one executor per CPU core, and one executor per task, printing the time taken for each setup to compare their performance.
+
+## Task3
+

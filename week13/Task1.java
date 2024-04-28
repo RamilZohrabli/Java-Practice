@@ -2,135 +2,131 @@ package week13;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
-class WordCounter {
-    public static int countValidWords(String line) {
-        String[] words = line.split("\\s+"); 
-        int count = 0;
-        for (String word : words) {
-            if (word.replaceAll("[^a-zA-Z]", "").length() > 3) { 
-                count++;
+public class Task1 {
+
+    private static final String FILE_PATH = "file.txt"; // Path to the text file
+
+    // Method to create a sample file with test data
+    private static void createTestFile() {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH))) {
+            writer.write("The quick brown fox jumps over the lazy dog.\n");
+            writer.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n");
+            writer.write("The goal is to count words, with tokens longer than 3 symbols.\n");
+            writer.write("This file has multiple lines with varied lengths and contents.\n");
+            writer.write("Concurrent and sequential word counting will be tested.\n");
+            writer.write("Some lines are short, while others contain more words.\n");
+            writer.write("To test concurrency, chunks of 300 lines will be assigned to threads.\n");
+            writer.write("Join all threads to ensure completion and measure the time taken.\n");
+            writer.write("It's a good exercise for parallel programming and performance analysis.\n");
+            writer.write("Let's create this file and then proceed with word counting.\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("Test file created at: " + FILE_PATH);
+    }
+
+    // Method to count words sequentially (without concurrency)
+    private static int countWordsSequential() {
+        int wordCount = 0;
+        try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] tokens = line.split("\\s+");
+                for (String token : tokens) {
+                    if (token.length() > 3) {
+                        wordCount++;
+                    }
+                }
             }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        return count;
+
+        return wordCount;
     }
 
-    public static void countWordsSequential(String filePath) throws IOException {
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(filePath));
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found: " + filePath);
-            return;  
-        }
+    // Worker for counting words concurrently in chunks
+    private static class WordCountWorker implements Callable<Integer> {
+        private final List<String> lines;
 
-        int totalWordCount = 0;
-        long startTime = System.nanoTime();  
-
-        String line;
-        while ((line = reader.readLine()) != null) {
-            totalWordCount += countValidWords(line);
-        }
-
-        reader.close(); 
-
-        long endTime = System.nanoTime();  
-        long duration = TimeUnit.NANOSECONDS.toMillis(endTime - startTime);  // Convert to milliseconds
-
-        System.out.println("Total word count (Sequential): " + totalWordCount);
-        System.out.println("Time taken (Sequential): " + duration + " ms");
-    }
-
-    // Thread class to count words in a given chunk
-    public static class WordCountThread extends Thread {
-        private List<String> lines;
-        private int wordCount;
-
-        public WordCountThread(List<String> lines) {
+        public WordCountWorker(List<String> lines) {
             this.lines = lines;
         }
 
         @Override
-        public void run() {
-            wordCount = 0;
+        public Integer call() {
+            int count = 0;
             for (String line : lines) {
-                wordCount += countValidWords(line);  // Count words with more than three symbols
+                String[] tokens = line.split("\\s+");
+                for (String token : tokens) {
+                    if (token.length() > 3) {
+                        count++;
+                    }
+                }
             }
-        }
-
-        public int getWordCount() {
-            return wordCount;  // Get the total word count for this thread
+            return count;
         }
     }
 
-    // Concurrent approach to count words with multithreading
-    public static void countWordsConcurrent(String filePath) throws IOException, InterruptedException {
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(filePath));
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found: " + filePath);
-            return;  // Exit if the file doesn't exist
-        }
+    // Method to count words concurrently (with threads)
+    private static int countWordsConcurrent() {
+        List<Future<Integer>> results = new ArrayList<>();
+        ExecutorService executor = Executors.newFixedThreadPool(4);
+        try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
+            List<String> lines = new ArrayList<>();
+            String line;
+            int lineCounter = 0;
 
-        List<String> lines = new ArrayList<>();
-        String line;
+            while ((line = br.readLine()) != null) {
+                lines.add(line);
+                lineCounter++;
 
-        // Read all lines into a list
-        while ((line = reader.readLine()) != null) {
-            lines.add(line);
-        }
-        reader.close(); 
+                if (lineCounter == 300) {
+                    results.add(executor.submit(new WordCountWorker(lines)));
+                    lines.clear(); // Reset the list for the next chunk
+                    lineCounter = 0;
+                }
+            }
 
-        int chunkSize = 300;
-        List<List<String>> chunks = new ArrayList<>();
-        for (int i = 0; i < lines.size(); i += chunkSize) {
-            chunks.add(lines.subList(i, Math.min(i + chunkSize, lines.size())));
-        }
-
-        List<WordCountThread> threads = new ArrayList<>();
-        long startTime = System.nanoTime();
-
-        for (List<String> chunk : chunks) {
-            WordCountThread thread = new WordCountThread(chunk);
-            threads.add(thread);
-            thread.start();
-        }
-
-        for (WordCountThread thread : threads) {
-            thread.join(); 
+            if (!lines.isEmpty()) {
+                results.add(executor.submit(new WordCountWorker(lines)));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
         int totalWordCount = 0;
-        for (WordCountThread thread : threads) {
-            totalWordCount += thread.getWordCount();
+        for (Future<Integer> result : results) {
+            try {
+                totalWordCount += result.get();
+            } catch (InterruptedException | ExecutionException e) {
+                e.printStackTrace();
+            }
         }
 
-        long endTime = System.nanoTime(); 
-        long duration = TimeUnit.NANOSECONDS.toMillis(endTime - startTime);  // Convert to milliseconds
-
-        System.out.println("Total word count (Concurrent): " + totalWordCount);
-        System.out.println("Time taken (Concurrent): " + duration + " ms");
+        executor.shutdown(); // Shutdown the executor after all tasks are completed
+        return totalWordCount;
     }
-}
 
-public class Task1 {
-    public static void main(String[] args) throws IOException, InterruptedException {
-        String filePath = "file.txt"; 
+    // Main method
+    public static void main(String[] args) {
+        createTestFile(); // Create the test file with sample content
 
-        System.out.println("Sequential approach:");
-        try {
-            WordCounter.countWordsSequential(filePath);  
-        } catch (IOException e) {
-            System.out.println("Error in sequential approach: " + e.getMessage());
-        }
+        // Sequential word count
+        long startTime = System.currentTimeMillis();
+        int sequentialWordCount = countWordsSequential();
+        long endTime = System.currentTimeMillis();
+        System.out.println("Sequential word count: " + sequentialWordCount);
+        System.out.println("Time taken (ms): " + (endTime - startTime));
 
-        System.out.println("\nConcurrent approach:");
-        try {
-            WordCounter.countWordsConcurrent(filePath);  
-        } catch (IOException | InterruptedException e) {
-            System.out.println("Error in concurrent approach: " + e.getMessage());
-        }
+        // Concurrent word count
+        startTime = System.currentTimeMillis();
+        int concurrentWordCount = countWordsConcurrent();
+        endTime = System.currentTimeMillis();
+        System.out.println("Concurrent word count: " + concurrentWordCount);
+        System.out.println("Time taken (ms): " + (endTime - startTime));
     }
 }
